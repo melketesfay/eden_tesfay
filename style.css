@@ -472,3 +472,193 @@ h3 { font-size: 1.32rem; letter-spacing: -.02em; }
   .button { width: 100%; }
   .hero-badges { gap: .55rem; }
 }
+
+
+/* V2.1 brand polish */
+.brand-v21 {
+  gap: 13px;
+  min-width: max-content;
+}
+
+.brand-emblem-wrap {
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255,250,244,.95), rgba(245,237,227,.9));
+  border: 1px solid rgba(213, 180, 138, .35);
+  box-shadow: 0 12px 28px rgba(54,55,41,.10);
+  overflow: hidden;
+}
+
+.brand-emblem {
+  width: 92%;
+  height: 92%;
+  object-fit: cover;
+  border-radius: 999px;
+}
+
+.brand-wordmark {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: baseline;
+  column-gap: 8px;
+  row-gap: 0;
+  line-height: 1;
+}
+
+.brand-rest {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.35rem, 1.7vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  color: #334637;
+}
+
+.brand-afh {
+  position: relative;
+  top: -1px;
+  padding-left: 10px;
+  border-left: 1px solid rgba(181, 123, 93, .42);
+  color: #b18454;
+  font-weight: 800;
+  letter-spacing: .13em;
+  font-size: .92rem;
+}
+
+.brand-wordmark small {
+  grid-column: 1 / -1;
+  margin-top: 6px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: .68rem;
+  font-weight: 700;
+}
+
+/* Hide old image class if any remains in cache */
+.brand-logo,
+.brand-text {
+  display: none;
+}
+
+.hero-brand-card {
+  width: min(440px, 100%);
+  margin-top: 1.3rem;
+  padding: .75rem;
+  border-radius: 24px;
+  background: rgba(255, 250, 244, .76);
+  border: 1px solid rgba(213, 180, 138, .22);
+  box-shadow: 0 16px 42px rgba(54,55,41,.09);
+}
+
+.hero-brand-card img {
+  width: 100%;
+  border-radius: 18px;
+  display: block;
+}
+
+/* V2.1 subtle motion system */
+[data-reveal],
+.reveal-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 700ms cubic-bezier(.22, .61, .36, 1),
+    transform 700ms cubic-bezier(.22, .61, .36, 1);
+}
+
+[data-reveal].is-visible,
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card.is-visible,
+.gallery-card.is-visible,
+.feature-item.is-visible {
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.hero-visual-card {
+  will-change: transform;
+  transition: transform 100ms linear;
+}
+
+/* Add a small premium underline flourish to the brand */
+.brand-rest::after {
+  content: "";
+  display: block;
+  width: 62%;
+  height: 2px;
+  margin-top: 7px;
+  background: linear-gradient(90deg, rgba(213,180,138,.85), rgba(181,123,93,.08));
+  border-radius: 999px;
+}
+
+/* Slightly more polished header shape */
+.site-header {
+  box-shadow: 0 10px 34px rgba(54,55,41,.07);
+}
+
+.header-inner {
+  padding: 0 2px;
+}
+
+@media (max-width: 860px) {
+  .brand-v21 {
+    gap: 10px;
+  }
+
+  .brand-emblem-wrap {
+    width: 58px;
+    height: 58px;
+  }
+
+  .brand-rest {
+    font-size: 1.25rem;
+  }
+
+  .brand-afh {
+    font-size: .76rem;
+    letter-spacing: .1em;
+    padding-left: 8px;
+  }
+
+  .brand-wordmark small {
+    font-size: .58rem;
+    letter-spacing: .11em;
+  }
+
+  .hero-brand-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-emblem-wrap {
+    width: 52px;
+    height: 52px;
+  }
+
+  .brand-rest {
+    font-size: 1.05rem;
+  }
+
+  .brand-wordmark small {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  [data-reveal],
+  .reveal-up,
+  .hero-visual-card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
