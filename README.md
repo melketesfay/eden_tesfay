@@ -1,36 +1,36 @@
-V2.1 POLISH PASS
+# Rest Assured AFH - V2.3 Deploy Package
 
-# Rest Assured AFH - Finalized V2 Static Website
+Deploy-ready static website package.
 
-This package contains the improved V2 static prototype for Rest Assured AFH.
+## Public details included
+- Area: Everett / Silver Fir, Washington
+- License number: 758759
+- Home phone: (425) 332-3455
+- Mobile phone: (206) 403-3838
+- Email: restassuredfh@gmail.com
 
-## Files included
+## Real photos added
+- `real-bedroom-guest-room.jpg` from `WhatsApp Image 2026-05-01 at 18.29.30 (1).jpeg` size (1800, 1012)
+- `real-bathroom-accessible-wide.jpg` from `WhatsApp Image 2026-05-01 at 18.29.30 (2).jpeg` size (1800, 1012)
+- `real-bedroom-care-bed.jpg` from `WhatsApp Image 2026-05-01 at 18.29.30.jpeg` size (1800, 1012)
+- `real-exterior-front.jpg` from `WhatsApp Image 2026-05-01 at 18.29.31 (1).jpeg` size (1435, 906)
+- `real-bedroom-guest-room-alt.jpg` from `WhatsApp Image 2026-05-01 at 18.29.31 (2).jpeg` size (1800, 1012)
+- `real-kitchen-wide.jpg` from `WhatsApp Image 2026-05-01 at 18.29.31 (3).jpeg` size (1800, 1012)
+- `real-bathroom-accessible-portrait.jpg` from `WhatsApp Image 2026-05-01 at 18.29.31.jpeg` size (1152, 2048)
+- `real-welcome-tray-wide.jpg` from `WhatsApp Image 2026-05-01 at 18.29.32 (1).jpeg` size (1800, 1012)
+- `real-living-room.jpg` from `WhatsApp Image 2026-05-01 at 18.29.32.jpeg` size (1800, 1012)
+- `real-dining-wide.jpg` from `WhatsApp Image 2026-05-01 at 18.29.33.jpeg` size (1800, 1012)
+- `real-open-floor-dining-kitchen.jpg` from `WhatsApp Image 2026-05-01 at 18.29.35 (1).jpeg` size (1800, 1012)
+- `real-dining-shelf.jpg` from `WhatsApp Image 2026-05-01 at 18.29.35 (2).jpeg` size (1800, 1012)
+- `real-dining-close.jpg` from `WhatsApp Image 2026-05-01 at 18.29.35 (3).jpeg` size (1800, 1012)
+- `real-patio-deck.jpg` from `WhatsApp Image 2026-05-01 at 18.29.35 (4).jpeg` size (1800, 1012)
+- `real-welcome-tray-portrait.jpg` from `WhatsApp Image 2026-05-01 at 18.29.35.jpeg` size (1152, 2048)
 
-- `index.html`
-- `style.css`
-- `script.js`
-- `assets/` folder with all generated placeholder images and the logo SVG
+## Note
+The Google Maps embed uses the Everett / Silver Fir area, not an exact street address.
 
-## Important before publishing
 
-Replace these placeholders before the site goes live:
-
-- official license number
-- real phone number
-- actual address or service area wording
-- any final approved wording for services and scope of care
-- generated placeholder images with real professional photos of the actual home, when available
-
-## Notes
-
-- The Google Maps embed currently points to downtown Seattle as a temporary placeholder.
-- The generated images are suitable for mockup/prototype use and early presentation, but real photos will build more trust for the final public website.
-- Avoid publishing inaccurate claims or placeholder data.
-
-## V2.1 changes
-
-- Reworked header brand identity using the selected generated logo direction.
-- Added a compact header emblem plus styled wordmark.
-- Added the full logo artwork as a hero brand card.
-- Added subtle scroll-reveal animations and light parallax motion.
-- Animations respect `prefers-reduced-motion`.
+## V2.3 updates
+- Reintroduced the preferred emblem logo in the header and as favicon.
+- Added the full branded logo below the hero section.
+- Corrected all contact email references to restassuredafh@gmail.com.

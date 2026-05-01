@@ -18,16 +18,20 @@ if (navToggle && siteNav) {
   });
 }
 
+// V2.2 smooth repeatable scroll reveals, no hero parallax jitter
+const reduceMotionV22 = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// V2.1 subtle scroll animations
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-if (!reduceMotion) {
-  const revealItems = document.querySelectorAll('[data-reveal], .reveal-up');
+if (!reduceMotionV22) {
+  const revealItems = document.querySelectorAll('[data-reveal], .reveal-up, .service-card, .gallery-card, .feature-item, .intro-ribbon article, .real-photo-strip img');
 
   revealItems.forEach((item, index) => {
-    if (item.classList.contains('service-card') || item.classList.contains('gallery-card') || item.classList.contains('feature-item')) {
-      item.style.setProperty('--reveal-delay', `${Math.min(index % 6, 5) * 70}ms`);
+    if (
+      item.classList.contains('service-card') ||
+      item.classList.contains('gallery-card') ||
+      item.classList.contains('feature-item') ||
+      item.tagName === 'IMG'
+    ) {
+      item.style.setProperty('--reveal-delay', `${Math.min(index % 5, 4) * 55}ms`);
     }
   });
 
@@ -35,41 +39,14 @@ if (!reduceMotion) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
+      } else if (entry.boundingClientRect.top > window.innerHeight) {
+        entry.target.classList.remove('is-visible');
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -8% 0px'
+    threshold: 0.14,
+    rootMargin: '0px 0px -7% 0px'
   });
 
   revealItems.forEach((item) => observer.observe(item));
-
-  const parallaxItems = document.querySelectorAll('[data-parallax]');
-  let ticking = false;
-
-  function updateParallax() {
-    const viewportHeight = window.innerHeight || 1;
-
-    parallaxItems.forEach((item) => {
-      const speed = Number(item.dataset.parallax || 0.08);
-      const rect = item.getBoundingClientRect();
-      const centerOffset = (rect.top + rect.height / 2) - viewportHeight / 2;
-      const translateY = Math.max(Math.min(-centerOffset * speed, 24), -24);
-      item.style.transform = `translate3d(0, ${translateY}px, 0)`;
-    });
-
-    ticking = false;
-  }
-
-  function requestParallax() {
-    if (!ticking) {
-      window.requestAnimationFrame(updateParallax);
-      ticking = true;
-    }
-  }
-
-  window.addEventListener('scroll', requestParallax, { passive: true });
-  window.addEventListener('resize', requestParallax, { passive: true });
-  requestParallax();
 }
