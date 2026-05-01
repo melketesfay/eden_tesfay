@@ -34,3 +34,10 @@ The Google Maps embed uses the Everett / Silver Fir area, not an exact street ad
 - Reintroduced the preferred emblem logo in the header and as favicon.
 - Added the full branded logo below the hero section.
 - Corrected all contact email references to restassuredafh@gmail.com.
+
+
+## V2.4 updates
+- Added a lightweight lightbox for all real photos using filenames that contain `real-`.
+- Real photos can be opened larger by click/tap.
+- Lightbox closes via X button, outside click, or Escape key.
+- No asset changes required for this patch.
