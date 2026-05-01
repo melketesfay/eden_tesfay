@@ -5,265 +5,443 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Rest Assured AFH provides warm, family-centered adult family home care in the Seattle, Washington area."
+      content="Rest Assured AFH offers warm, nurse-led adult family home care in the Seattle area in a peaceful, family-centered setting."
     />
-    <title>Rest Assured AFH | Adult Family Home Care in Seattle</title>
+    <title>Rest Assured AFH | Warm, Family-Centered Adult Family Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="site-bg-glow site-bg-glow-left"></div>
+    <div class="site-bg-glow site-bg-glow-right"></div>
+
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Rest Assured AFH home">
-        <span class="brand-mark">RA</span>
-        <span>
-          <strong>Rest Assured AFH</strong>
-          <small>Adult Family Home Care</small>
-        </span>
-      </a>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Rest Assured AFH home">
+          <img
+            class="brand-logo"
+            src="assets/logo-rest-assured.svg"
+            alt="Rest Assured AFH logo"
+          />
+          <span class="brand-text">
+            <strong>Rest Assured AFH</strong>
+            <small>Adult Family Home Care</small>
+          </span>
+        </a>
 
-      <button
-        class="nav-toggle"
-        aria-label="Open navigation"
-        aria-expanded="false"
-      >
-        <span></span><span></span><span></span>
-      </button>
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
 
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#home">Our Home</a>
-        <a href="#admissions">Admissions</a>
-        <a href="#contact">Contact</a>
-      </nav>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Our Home</a>
+          <a href="#care">Why Us</a>
+          <a href="#location">Location</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero">
-        <div class="hero-content">
-          <p class="eyebrow">
-            Licensed Adult Family Home · Seattle, Washington
-          </p>
-          <h1>Compassionate, nurse-led care in a safe and peaceful home.</h1>
-          <p class="hero-text">
-            Rest Assured AFH offers personalized support for adults and seniors
-            in a warm, family-like environment where dignity, comfort, and
-            attentive care come first.
-          </p>
-          <div class="hero-actions">
-            <a
-              class="button primary"
-              href="mailto:restassuredfh@gmail.com?subject=Tour%20Request%20-%20Rest%20Assured%20AFH"
-              >Schedule a Tour</a
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              Licensed Adult Family Home · Seattle, Washington
+            </p>
+            <h1>Warm, reassuring care in a place that feels like home.</h1>
+            <p class="hero-lead">
+              Rest Assured AFH provides nurse-led adult family home care in a
+              peaceful, family-centered environment. Our goal is simple: to help
+              residents feel safe, respected, comfortable, and truly cared for
+              every day.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="mailto:restassuredfh@gmail.com?subject=Schedule%20a%20Tour%20-%20Rest%20Assured%20AFH"
+                >Schedule a Tour</a
+              >
+              <a class="button button-secondary" href="tel:+12065550123"
+                >Call (206) 555-0123</a
+              >
+            </div>
+
+            <div class="hero-badges">
+              <span>Family-Centered</span>
+              <span>Nurse-Led</span>
+              <span>Home-Like Setting</span>
+            </div>
+
+            <p class="hero-note">
+              License #:
+              <span class="placeholder">[Add official license number]</span>
+            </p>
+          </div>
+
+          <div class="hero-visual-card">
+            <div class="hero-image-frame hero-image-main">
+              <img
+                src="assets/exterior-main.png"
+                alt="Warm and welcoming adult family home exterior"
+              />
+            </div>
+            <div class="hero-mini-panels">
+              <div class="mini-panel">
+                <img
+                  src="assets/living-room-care.png"
+                  alt="Caregiver warmly helping an elderly resident"
+                />
+              </div>
+              <div class="mini-panel quote-panel">
+                <p>
+                  Compassion, dignity, and peace of mind — all in a setting that
+                  feels personal and calm.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-ribbon">
+        <div class="container intro-ribbon-grid">
+          <article>
+            <strong>Professional care</strong>
+            <p>Thoughtful nurse-led oversight and attentive daily support.</p>
+          </article>
+          <article>
+            <strong>Personal atmosphere</strong>
+            <p>
+              A smaller home environment where residents feel known and
+              respected.
+            </p>
+          </article>
+          <article>
+            <strong>Family values</strong>
+            <p>
+              Care shaped by compassion, kindness, and meaningful human
+              connection.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container two-col about-grid">
+          <div>
+            <p class="eyebrow">About Rest Assured AFH</p>
+            <h2>
+              Care guided by nursing experience, family values, and a sincere
+              heart for elders.
+            </h2>
+          </div>
+          <div class="body-copy">
+            <p>
+              Rest Assured AFH was created to offer a calm, respectful, and
+              genuinely caring alternative to larger settings. The home is led
+              by a licensed nurse with advanced education, a strong sense of
+              responsibility, and deep family values.
+            </p>
+            <p>
+              Our approach is personal and relationship-based. We believe
+              residents should feel safe, seen, and comfortable — not simply
+              cared for as part of a routine. Families can expect thoughtful
+              communication, consistent support, and an environment shaped by
+              dignity, patience, and compassion.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section section-soft">
+        <div class="container">
+          <div class="section-head centered">
+            <p class="eyebrow">Services</p>
+            <h2>
+              Support tailored to daily living, comfort, and peace of mind.
+            </h2>
+            <p>
+              The services below reflect the current draft brief. Before
+              publication, they should be verified against the home’s official
+              scope of care and disclosure documents.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <h3>Personal Care</h3>
+              <p>
+                Assistance with bathing, grooming, dressing, toileting,
+                mobility, and daily living routines.
+              </p>
+            </article>
+            <article class="service-card">
+              <h3>Medication Assistance</h3>
+              <p>
+                Support with medication routines according to care plans,
+                provider guidance, and applicable regulations.
+              </p>
+            </article>
+            <article class="service-card">
+              <h3>Nurse-Led Support</h3>
+              <p>
+                Care guided by professional observation, thoughtful
+                communication, and clinical awareness.
+              </p>
+            </article>
+            <article class="service-card">
+              <h3>Memory Care</h3>
+              <p>
+                Calm routines and supportive care for residents with
+                memory-related needs, when accepted by the home.
+              </p>
+            </article>
+            <article class="service-card">
+              <h3>Hospice Support</h3>
+              <p>
+                Compassionate comfort-oriented support in collaboration with
+                hospice or other healthcare providers, when appropriate.
+              </p>
+            </article>
+            <article class="service-card">
+              <h3>Respite Care</h3>
+              <p>
+                Short-term stays may be available for families needing temporary
+                support or caregiver relief.
+              </p>
+            </article>
+            <article class="service-card">
+              <h3>Meals & Nutrition</h3>
+              <p>
+                Home-style meals, snacks, hydration support, and attention to
+                individual comfort and preferences.
+              </p>
+            </article>
+            <article class="service-card">
+              <h3>Housekeeping & Laundry</h3>
+              <p>
+                Clean and orderly living spaces that help residents feel
+                comfortable and at home.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section">
+        <div class="container">
+          <div class="section-head centered">
+            <p class="eyebrow">Our Home</p>
+            <h2>
+              Warm spaces designed for comfort, familiarity, and everyday peace.
+            </h2>
+            <p>
+              These are draft placeholder visuals created for the prototype.
+              Before launch, replace them with real professional photos of the
+              actual home.
+            </p>
+          </div>
+
+          <div class="gallery-grid">
+            <figure class="gallery-card gallery-large">
+              <img
+                src="assets/living-room-main.png"
+                alt="Bright and comfortable shared living room"
+              />
+              <figcaption>
+                Shared living room for rest, conversation, and daily comfort.
+              </figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <img
+                src="assets/bedroom-main.png"
+                alt="Comfortable resident bedroom"
+              />
+              <figcaption>
+                A peaceful bedroom designed to feel calm and restful.
+              </figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <img src="assets/dining-room.png" alt="Warm dining room" />
+              <figcaption>
+                Home-style meals in a welcoming dining setting.
+              </figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <img src="assets/kitchen.png" alt="Warm and tidy kitchen" />
+              <figcaption>
+                A bright kitchen that supports home-style care and meal
+                preparation.
+              </figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <img src="assets/bathroom.png" alt="Accessible modern bathroom" />
+              <figcaption>
+                A clean, accessible bathroom designed with comfort and safety in
+                mind.
+              </figcaption>
+            </figure>
+            <figure class="gallery-card">
+              <img src="assets/entryway.png" alt="Inviting entryway" />
+              <figcaption>
+                An inviting entrance that sets the tone for a warm home
+                environment.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="care" class="section care-section">
+        <div class="container two-col care-grid">
+          <div class="care-visual-stack">
+            <div class="stack-card">
+              <img
+                src="assets/caregiver-support.png"
+                alt="Warm caregiver supporting an elderly resident"
+              />
+            </div>
+            <div class="stack-card small-stack-card">
+              <img
+                src="assets/family-gathering.png"
+                alt="Family gathered warmly in the home"
+              />
+            </div>
+          </div>
+
+          <div>
+            <p class="eyebrow">Why Families Choose Us</p>
+            <h2>
+              A more personal setting where care feels thoughtful, steady, and
+              human.
+            </h2>
+            <div class="feature-list">
+              <article class="feature-item">
+                <h3>Smaller home atmosphere</h3>
+                <p>
+                  A quieter, more intimate setting can help residents feel
+                  calmer and more comfortable than in larger institutions.
+                </p>
+              </article>
+              <article class="feature-item">
+                <h3>Clear family communication</h3>
+                <p>
+                  Families deserve reassurance, transparency, and a provider who
+                  takes their concerns seriously.
+                </p>
+              </article>
+              <article class="feature-item">
+                <h3>Respect and dignity first</h3>
+                <p>
+                  We believe every resident deserves care that is gentle,
+                  attentive, and rooted in dignity and compassion.
+                </p>
+              </article>
+              <article class="feature-item">
+                <h3>Professional oversight</h3>
+                <p>
+                  Nurse-led care supports thoughtful observation, careful
+                  routines, and a high level of responsibility.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="location" class="section section-soft">
+        <div class="container">
+          <div class="section-head centered">
+            <p class="eyebrow">Location</p>
+            <h2>Conveniently located in the Seattle area.</h2>
+            <p>
+              This map currently shows a temporary downtown Seattle placeholder
+              and should be updated before publication.
+            </p>
+          </div>
+
+          <div class="map-shell">
+            <iframe
+              title="Map showing temporary Seattle placeholder location"
+              src="https://www.google.com/maps?q=Seattle%20WA&z=13&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
             >
-            <a class="button secondary" href="tel:+12065550123"
-              >Call (206) 555-0123</a
-            >
-          </div>
-          <p class="fine-print">
-            License #:
-            <span class="placeholder">[Add official license number]</span>
-          </p>
-        </div>
-
-        <div class="hero-card" aria-label="Photo placeholder">
-          <div class="photo-placeholder large">
-            <span>Home photo placeholder</span>
-          </div>
-          <div class="trust-strip">
-            <span>24/7 care setting</span>
-            <span>Small home environment</span>
-            <span>Family-centered values</span>
+            </iframe>
           </div>
         </div>
       </section>
 
-      <section class="section split" id="about">
-        <div>
-          <p class="eyebrow">About Rest Assured AFH</p>
-          <h2>
-            Care guided by professional nursing experience and family values.
-          </h2>
-        </div>
-        <div class="copy">
-          <p>
-            Rest Assured AFH was created to offer a calm, respectful, and
-            home-like alternative for families seeking dependable daily care.
-            The home is led by a licensed nurse with advanced education and a
-            deep commitment to serving older adults with patience, kindness, and
-            professionalism.
-          </p>
-          <p>
-            Our approach is personal and relationship-based. We believe
-            residents should feel known, safe, and valued — not simply cared for
-            as part of a routine. Families can expect clear communication,
-            thoughtful support, and a care environment shaped by dignity,
-            compassion, and strong family values.
-          </p>
-        </div>
-      </section>
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="contact-card">
+            <div>
+              <p class="eyebrow">Contact</p>
+              <h2>Let’s talk about the care your loved one needs.</h2>
+              <p>
+                Choosing the right adult family home is a meaningful decision.
+                We welcome your questions and would be honored to speak with you
+                about whether Rest Assured AFH may be the right fit.
+              </p>
+            </div>
 
-      <section class="section soft" id="services">
-        <div class="section-heading">
-          <p class="eyebrow">Services</p>
-          <h2>Personalized support for daily living and peace of mind.</h2>
-          <p>
-            Services are tailored to each resident’s needs and are provided
-            within the home’s licensed scope of care. Final availability should
-            be confirmed during the admission conversation.
-          </p>
-        </div>
+            <div class="contact-info-grid">
+              <a href="tel:+12065550123"
+                ><span>Phone</span><strong>(206) 555-0123</strong></a
+              >
+              <a href="mailto:restassuredfh@gmail.com"
+                ><span>Email</span><strong>restassuredfh@gmail.com</strong></a
+              >
+              <div>
+                <span>Service Area</span><strong>Seattle, Washington</strong>
+              </div>
+              <div>
+                <span>Tour Availability</span
+                ><strong>Private tours by appointment</strong>
+              </div>
+            </div>
 
-        <div class="service-grid">
-          <article class="service-card">
-            <h3>Personal Care</h3>
-            <p>
-              Assistance with bathing, grooming, dressing, toileting, mobility,
-              and other activities of daily living.
-            </p>
-          </article>
-          <article class="service-card">
-            <h3>Nurse-Led Support</h3>
-            <p>
-              Care guided by nursing knowledge, observation, communication, and
-              attention to resident well-being.
-            </p>
-          </article>
-          <article class="service-card">
-            <h3>Medication Assistance</h3>
-            <p>
-              Medication reminders and assistance according to care plans,
-              provider instructions, and applicable regulations.
-            </p>
-          </article>
-          <article class="service-card">
-            <h3>Memory & Dementia Care</h3>
-            <p>
-              Supportive routines, calm communication, and a safe environment
-              for residents with memory-related needs, if accepted by the home.
-            </p>
-          </article>
-          <article class="service-card">
-            <h3>Hospice & Comfort Support</h3>
-            <p>
-              Compassionate support for residents and families in coordination
-              with hospice or outside healthcare providers, when appropriate.
-            </p>
-          </article>
-          <article class="service-card">
-            <h3>Respite Care</h3>
-            <p>
-              Short-term stays may be available for families needing temporary
-              support or caregiver relief.
-            </p>
-          </article>
-          <article class="service-card">
-            <h3>Meals & Nutrition</h3>
-            <p>
-              Home-cooked meals, snacks, hydration support, and attention to
-              individual preferences and dietary guidance.
-            </p>
-          </article>
-          <article class="service-card">
-            <h3>Housekeeping & Laundry</h3>
-            <p>
-              Clean living spaces, laundry support, and daily routines that help
-              residents feel comfortable and at home.
-            </p>
-          </article>
-        </div>
-      </section>
+            <div class="contact-actions">
+              <a
+                class="button button-primary"
+                href="mailto:restassuredfh@gmail.com?subject=Tour%20Request%20-%20Rest%20Assured%20AFH"
+                >Email to Schedule a Tour</a
+              >
+            </div>
 
-      <section class="section" id="home">
-        <div class="section-heading">
-          <p class="eyebrow">Our Home</p>
-          <h2>A quiet, comfortable setting designed for safety and dignity.</h2>
-          <p>
-            Real photos of the home, rooms, common areas, kitchen, outdoor
-            space, and safety features should be added here before publishing.
-          </p>
-        </div>
-
-        <div class="gallery">
-          <div class="photo-placeholder"><span>Bedroom photo</span></div>
-          <div class="photo-placeholder"><span>Living room photo</span></div>
-          <div class="photo-placeholder"><span>Dining area photo</span></div>
-          <div class="photo-placeholder"><span>Outdoor area photo</span></div>
-        </div>
-      </section>
-
-      <section class="section split soft" id="admissions">
-        <div>
-          <p class="eyebrow">Admissions</p>
-          <h2>Who may be a good fit?</h2>
-        </div>
-        <div class="copy">
-          <p>
-            Rest Assured AFH may be appropriate for adults or seniors who need
-            help with daily living, medication routines, meals, mobility,
-            supervision, or a quieter home setting than a larger facility.
-          </p>
-          <ul class="check-list">
-            <li>
-              Families looking for a smaller, more personal care environment
-            </li>
-            <li>
-              Residents who benefit from consistent routines and attentive
-              caregivers
-            </li>
-            <li>
-              Individuals needing support with daily care, meals, and
-              supervision
-            </li>
-            <li>Short-term respite stays, if available</li>
-          </ul>
-          <p class="notice">
-            Please do not send detailed medical information by email. A full
-            care discussion should take place privately during the admission and
-            assessment process.
-          </p>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="contact-card">
-          <p class="eyebrow">Contact</p>
-          <h2>Schedule a conversation or tour.</h2>
-          <p>
-            Choosing care for a loved one is a serious decision. We welcome
-            families to reach out, ask questions, and learn whether Rest Assured
-            AFH may be the right fit.
-          </p>
-
-          <div class="contact-methods">
-            <a href="tel:+12065550123">
-              <span>Phone</span>
-              <strong>(206) 555-0123</strong>
-            </a>
-            <a href="mailto:restassuredfh@gmail.com">
-              <span>Email</span>
-              <strong>restassuredfh@gmail.com</strong>
-            </a>
-            <a href="#">
-              <span>Location</span>
-              <strong>Seattle, Washington</strong>
-            </a>
+            <p class="contact-note">
+              Please do not send detailed medical information by email. A full
+              care discussion should take place privately during the intake
+              process.
+            </p>
           </div>
-
-          <a
-            class="button primary"
-            href="mailto:restassuredfh@gmail.com?subject=Inquiry%20-%20Rest%20Assured%20AFH"
-            >Email Rest Assured AFH</a
-          >
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> Rest Assured AFH. All rights reserved.</p>
-      <p class="fine-print">
-        This website is a draft template. Replace placeholders and verify all
-        licensing, services, pricing, and regulatory wording before publication.
-      </p>
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Rest Assured AFH. All rights reserved.</p>
+        <p>
+          Draft prototype website. Replace placeholders, verify services, and
+          review regulatory wording before publication.
+        </p>
+      </div>
     </footer>
 
     <script src="script.js"></script>

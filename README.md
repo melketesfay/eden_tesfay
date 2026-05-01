@@ -1,20 +1,22 @@
-# Rest Assured AFH Static Website Draft
+# Rest Assured AFH - Finalized V2 Static Website
 
-This is a static one-page website draft for Rest Assured AFH.
+This package contains the improved V2 static prototype for Rest Assured AFH.
 
-## Files
+## Files included
 - `index.html`
 - `style.css`
 - `script.js`
+- `assets/` folder with all generated placeholder images and the logo SVG
 
 ## Important before publishing
-Replace all placeholders:
-- Phone number
-- License number
-- Real address or service area wording
-- Real photos of the home
-- Exact approved services
-- Any required legal/regulatory wording
+Replace these placeholders before the site goes live:
+- official license number
+- real phone number
+- actual address or service area wording
+- any final approved wording for services and scope of care
+- generated placeholder images with real professional photos of the actual home, when available
 
-## Compliance note
-Do not publish service claims that are not included in the home's official scope of care / Disclosure of Services. Avoid collecting medical information through a public web form.
+## Notes
+- The Google Maps embed currently points to downtown Seattle as a temporary placeholder.
+- The generated images are suitable for mockup/prototype use and early presentation, but real photos will build more trust for the final public website.
+- Avoid publishing inaccurate claims or placeholder data.
