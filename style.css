@@ -947,11 +947,6 @@ figure.gallery-card {
   box-shadow: 0 22px 54px rgba(54, 55, 41, 0.11);
 }
 
-.footer-inner p:last-child {
-  color: var(--sage-deep);
-  font-weight: 700;
-}
-
 @media (max-width: 900px) {
   .brand-mark-v22 {
     width: 62px;
@@ -1017,6 +1012,11 @@ figure.gallery-card {
 
   .contact-info-grid {
     grid-template-columns: 1fr;
+  }
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
