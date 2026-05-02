@@ -251,11 +251,10 @@ h3 {
 .contact-card,
 .intro-ribbon article {
   background: rgba(255, 250, 244, 0.86);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+
   box-shadow: var(--shadow-md);
 }
 .hero-image-frame {
-  padding: 0.9rem;
   border-radius: var(--radius-xl);
 }
 .hero-image-main img {
@@ -270,7 +269,6 @@ h3 {
   gap: 1rem;
 }
 .mini-panel {
-  padding: 0.75rem;
   border-radius: 22px;
   overflow: hidden;
 }
@@ -866,10 +864,6 @@ figure.gallery-card {
   transform: none !important;
   transition: none !important;
   will-change: auto !important;
-}
-
-.hero-image-frame {
-  padding: 0.75rem;
 }
 
 .hero-image-main img {
