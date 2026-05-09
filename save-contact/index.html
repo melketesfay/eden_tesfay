@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Save Eden Tesfay from Rest Assured AFH as a contact, call, email, or open the location in maps."
+    />
+    <title>Save Contact | Rest Assured AFH</title>
+    <link rel="icon" type="image/png" href="/assets/favicon-rest-assured.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      body {
+        min-height: 100vh;
+      }
+
+      .save-contact-main {
+        min-height: calc(100vh - 112px);
+        display: grid;
+        align-items: center;
+        padding: clamp(2.5rem, 7vw, 5rem) 0;
+      }
+
+      .save-contact-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+        gap: clamp(1.5rem, 5vw, 4rem);
+        align-items: center;
+      }
+
+      .save-contact-card,
+      .save-contact-info-card {
+        background: rgba(255, 250, 244, 0.86);
+        border: 1px solid rgba(255, 255, 255, 0.66);
+        box-shadow: var(--shadow-md);
+        border-radius: 24px;
+      }
+
+      .save-contact-card {
+        padding: clamp(1.4rem, 4vw, 2.3rem);
+      }
+
+      .save-contact-logo {
+        width: min(440px, 100%);
+        margin-bottom: 1.4rem;
+      }
+
+      .save-contact-title {
+        max-width: 760px;
+      }
+
+      .save-contact-title h1 {
+        font-size: clamp(2.5rem, 5.5vw, 4.7rem);
+      }
+
+      .save-contact-title p {
+        color: var(--muted);
+        font-size: clamp(1rem, 1.2vw, 1.12rem);
+        max-width: 40rem;
+      }
+
+      .save-contact-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.85rem;
+        margin-top: 1.35rem;
+      }
+
+      .save-contact-action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 0.9rem 1rem;
+        border-radius: 16px;
+        text-decoration: none;
+        font-weight: 750;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.74);
+        color: var(--ink);
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease,
+          background 0.15s ease;
+        text-align: center;
+      }
+
+      .save-contact-action:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 28px rgba(54, 55, 41, 0.1);
+      }
+
+      .save-contact-action.primary {
+        background: linear-gradient(135deg, var(--sage-deep), #355040);
+        color: white;
+        border-color: transparent;
+        grid-column: 1 / -1;
+      }
+
+      .save-contact-info-card {
+        overflow: hidden;
+      }
+
+      .save-contact-photo {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+      }
+
+      .save-contact-details {
+        padding: clamp(1.2rem, 3vw, 1.8rem);
+      }
+
+      .save-contact-details h2 {
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        margin-bottom: 0.25rem;
+      }
+
+      .save-contact-role {
+        margin: 0 0 1.1rem;
+        color: var(--clay);
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+
+      .detail-list {
+        display: grid;
+        gap: 0.85rem;
+        margin-top: 1.15rem;
+      }
+
+      .detail-row {
+        padding: 0.9rem 1rem;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.64);
+        border: 1px solid var(--line);
+      }
+
+      .detail-row span {
+        display: block;
+        color: var(--clay);
+        font-size: 0.72rem;
+        font-weight: 850;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+      }
+
+      .detail-row strong {
+        display: block;
+        color: var(--ink);
+        font-size: 0.98rem;
+        line-height: 1.35;
+        word-break: break-word;
+      }
+
+      .save-contact-note {
+        margin-top: 1rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .save-contact-footer {
+        padding: 0 0 2rem;
+      }
+
+      @media (max-width: 900px) {
+        .save-contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .save-contact-photo {
+          height: 210px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .save-contact-actions {
+          grid-template-columns: 1fr;
+        }
+
+        .save-contact-card,
+        .save-contact-info-card {
+          border-radius: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-bg-glow site-bg-glow-left"></div>
+    <div class="site-bg-glow site-bg-glow-right"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand brand-v22" href="/" aria-label="Rest Assured AFH home">
+          <span class="brand-mark-v22" aria-hidden="true">
+            <img src="/assets/logo-v23-emblem.png" alt="" />
+          </span>
+          <span class="brand-wordmark-v22">
+            <span class="brand-title-line">
+              <span class="brand-rest-v22">Rest Assured</span>
+              <span class="brand-afh-v22">AFH</span>
+            </span>
+            <small>Adult Family Home Care</small>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Simple navigation">
+          <a href="/">Home</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="save-contact-main">
+      <div class="container save-contact-grid">
+        <section class="save-contact-card" data-reveal>
+          <img
+            class="save-contact-logo"
+            src="/assets/logo-v23-full.png"
+            alt="Rest Assured AFH Adult Family Home Care"
+          />
+
+          <div class="save-contact-title">
+            <p class="eyebrow">Save Contact</p>
+            <h1>Contact Rest Assured AFH</h1>
+            <p>
+              Save Eden Tesfay’s contact details, call directly, send an email,
+              or open the home location in maps.
+            </p>
+          </div>
+
+          <div class="save-contact-actions">
+            <a
+              class="save-contact-action primary"
+              href="/downloads/contact.vcf"
+              download="Eden-Tesfay-Rest-Assured-AFH.vcf"
+            >
+              Save Eden Tesfay as Contact
+            </a>
+            <a class="save-contact-action" href="tel:+14253323455">Call Home</a>
+            <a class="save-contact-action" href="tel:+12064033838"
+              >Call Mobile</a
+            >
+            <a
+              class="save-contact-action"
+              href="mailto:restassuredafh@gmail.com"
+              >Email</a
+            >
+            <a
+              class="save-contact-action"
+              href="https://www.google.com/maps/search/?api=1&query=5417%20133rd%20St%20SE%2C%20Everett%2C%20WA%2098208"
+              target="_blank"
+              rel="noopener"
+              >Open in Maps</a
+            >
+            <a class="save-contact-action" href="/">Visit Website</a>
+          </div>
+
+          <p class="save-contact-note">
+            If your phone asks for confirmation before saving the contact,
+            choose “Add Contact” or “Create New Contact”.
+          </p>
+        </section>
+
+        <aside class="save-contact-info-card" data-reveal>
+          <img
+            class="save-contact-photo"
+            src="/assets/real-exterior-front.jpg"
+            alt="Rest Assured AFH home exterior"
+          />
+          <div class="save-contact-details">
+            <h2>Eden Tesfay</h2>
+            <p class="save-contact-role">Owner | Rest Assured AFH</p>
+
+            <div class="detail-list">
+              <div class="detail-row">
+                <span>Home Phone</span>
+                <strong>+1 (425) 332-3455</strong>
+              </div>
+              <div class="detail-row">
+                <span>Mobile Phone</span>
+                <strong>+1 (206) 403-3838</strong>
+              </div>
+              <div class="detail-row">
+                <span>Email</span>
+                <strong>restassuredafh@gmail.com</strong>
+              </div>
+              <div class="detail-row">
+                <span>Address</span>
+                <strong>5417 133rd St SE<br />Everett, WA 98208</strong>
+              </div>
+              <div class="detail-row">
+                <span>License</span>
+                <strong>License #758759</strong>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer save-contact-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Rest Assured AFH. All rights reserved.</p>
+        <p>Built with ❤ by Rest Assured AFH.</p>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
