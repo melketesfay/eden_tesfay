@@ -7,7 +7,7 @@ Deploy-ready static website package.
 - License number: 758759
 - Home phone: (425) 332-3455
 - Mobile phone: (206) 403-3838
-- Email: restassuredfh@gmail.com
+- Email: restassuredafh@gmail.com
 
 ## Real photos added
 - `real-bedroom-guest-room.jpg` from `WhatsApp Image 2026-05-01 at 18.29.30 (1).jpeg` size (1800, 1012)
@@ -41,3 +41,39 @@ The Google Maps embed uses the Everett / Silver Fir area, not an exact street ad
 - Real photos can be opened larger by click/tap.
 - Lightbox closes via X button, outside click, or Escape key.
 - No asset changes required for this patch.
+
+
+## QR code decision update
+
+The business card QR codes should use URL targets, not a full embedded vCard QR.
+
+### Website QR
+Target URL:
+
+```text
+https://restassuredafh.com/
+```
+
+### Save Contact QR
+Target URL:
+
+```text
+https://restassuredafh.com/save-contact/
+```
+
+Reason: the previous full vCard QR was too dense for a small business-card layout. The save-contact landing page is easier to scan, works better across browsers, and avoids confusing direct `.vcf` download behavior.
+
+The actual `.vcf` file can still stay available at:
+
+```text
+https://restassuredafh.com/downloads/contact.vcf
+```
+
+but it should be triggered from the save-contact page, not used as the main QR target.
+
+## Corrected QR files in this package
+
+- `website_qr_rest_assured_afh.svg`
+- `website_qr_rest_assured_afh.png`
+- `save_contact_page_qr_rest_assured_afh.svg`
+- `save_contact_page_qr_rest_assured_afh.png`
