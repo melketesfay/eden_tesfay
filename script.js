@@ -90,7 +90,7 @@ if (!reduceMotionV22) {
   }
 
   function openLightbox(img) {
-    lightboxImage.src = img.currentSrc || img.src;
+    lightboxImage.src = img.dataset.fullSrc || img.currentSrc || img.src;
     lightboxImage.alt = img.alt || '';
     lightboxCaption.textContent = getCaptionForImage(img);
 

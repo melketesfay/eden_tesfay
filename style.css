@@ -545,7 +545,7 @@ figure.gallery-card {
 
 @media (max-width: 760px) {
   .site-header {
-    padding: 10px 0;
+    padding: 0;
   }
   .brand-logo {
     width: 60px;
@@ -1201,7 +1201,6 @@ body.lightbox-lock {
   }
 }
 
-
 /* V2.6.1 performance/layout correction
    Prevent image width/height attributes from forcing distorted layout. */
 img {
@@ -1272,3 +1271,62 @@ img {
 /* V2.6.2 performance tuning
    Responsive image variants are now selected via srcset/sizes.
    Keep logo and hero image aspect handling stable. */
+
+/* V2.6.3 visual regression fix
+   Restore preferred header-emblem overflow and use higher-quality logo display assets.
+   Keep QR/lightbox performance changes intact. */
+.site-header {
+  overflow: visible;
+}
+
+.header-inner,
+.brand-v22,
+.brand-mark-v22 {
+  overflow: visible;
+}
+
+.brand-mark-v22 {
+  width: 64px;
+  height: 64px;
+  align-self: center;
+}
+
+.brand-mark-v22 img {
+  width: 64px;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain;
+  transform: translateY(7px);
+  border-radius: 999px;
+}
+
+.logo-showcase-card img,
+.save-contact-logo {
+  image-rendering: auto;
+}
+
+@media (max-width: 900px) {
+  .brand-mark-v22 {
+    width: 58px;
+    height: 58px;
+  }
+
+  .brand-mark-v22 img {
+    width: 58px;
+    max-height: none !important;
+    transform: translateY(6px);
+  }
+}
+
+@media (max-width: 520px) {
+  .brand-mark-v22 {
+    width: 52px;
+    height: 52px;
+  }
+
+  .brand-mark-v22 img {
+    width: 52px;
+    max-height: none !important;
+    transform: translateY(5px);
+  }
+}
