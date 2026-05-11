@@ -214,3 +214,22 @@ Recommended server-side follow-up:
 - add long cache headers for images/fonts
 - add gzip or Brotli compression for CSS/JS/HTML
 - run Lighthouse in Incognito with extensions disabled
+
+## V2.6.4 update - Lighthouse mobile 90 attempt
+
+This patch targets the remaining mobile Lighthouse image delivery warnings without degrading the preferred logo visuals.
+
+### Changes
+
+- Added responsive caregiver image variants:
+  - `assets/caregiver-support-480.webp`
+  - `assets/caregiver-support-760.webp`
+- Updated the caregiver image to use `srcset`/`sizes` and keep the full-size image only for lightbox use via `data-full-src`.
+- Adjusted the hero image `srcset` so Lighthouse/mobile no longer chooses the 960px variant when the 640px version is sufficient.
+- Removed the accidental normal Google Fonts stylesheet link while keeping the async preload pattern and noscript fallback.
+- Added `defer` to the local `script.js` tag.
+
+### Notes
+
+The logo images were intentionally not aggressively recompressed again because the previous aggressive compression visibly degraded the brand presentation.
+
