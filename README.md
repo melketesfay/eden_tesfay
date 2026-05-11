@@ -184,3 +184,33 @@ This patch targets the remaining Lighthouse findings after V2.6.1.
 - `Pages with WebSocket cannot enter back/forward cache` is caused by the local dev server live-reload WebSocket and does not apply to the static production deployment.
 - Run Lighthouse in Incognito or with extensions disabled for cleaner results.
 
+## V2.6.3 update - Visual regression and lightbox fix
+
+This patch fixes visual regressions introduced during aggressive image optimization.
+
+### Changes
+
+- Replaced the overly compressed hero/showcase logo with a higher-quality display WebP:
+  - `assets/logo-v23-full-display.webp`
+- Replaced the overly compressed header emblem with a higher-quality display WebP:
+  - `assets/logo-v23-emblem-display.webp`
+- Restored the preferred header emblem overflow/oval feel with CSS overrides.
+- Fixed the lightbox to use `data-full-src` when available, so responsive thumbnail images open as full-size images.
+- Fixed the open dining/kitchen image lightbox source to use the full image instead of the small responsive variant.
+- Adjusted the hero preload to target the responsive hero image instead of preloading the old full-size image unnecessarily.
+
+### Production performance notes
+
+The current Lighthouse result is mostly limited by production server configuration, not only frontend files:
+
+- cache headers are missing for static assets
+- site is served over HTTP/1.1 instead of HTTP/2
+- CSS is still render-blocking
+- browser extension scripts appeared in the Lighthouse diagnostics
+
+Recommended server-side follow-up:
+
+- enable HTTP/2 in Nginx SSL listen directives
+- add long cache headers for images/fonts
+- add gzip or Brotli compression for CSS/JS/HTML
+- run Lighthouse in Incognito with extensions disabled
