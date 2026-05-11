@@ -1200,3 +1200,75 @@ body.lightbox-lock {
     right: 8px;
   }
 }
+
+
+/* V2.6.1 performance/layout correction
+   Prevent image width/height attributes from forcing distorted layout. */
+img {
+  max-width: 100%;
+}
+
+.brand-mark-v22 img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-height: 64px;
+  object-fit: contain;
+}
+
+.logo-showcase-card img,
+.save-contact-logo {
+  display: block;
+  width: min(100%, 720px);
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain;
+}
+
+.hero-image-main img {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 38vw, 460px) !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+  object-fit: cover;
+  object-position: center;
+}
+
+.save-contact-photo {
+  display: block;
+  width: 100%;
+  height: 230px !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .brand-mark-v22 img {
+    max-height: 56px;
+  }
+
+  .hero-image-main img {
+    height: clamp(260px, 62vw, 380px) !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand-mark-v22 img {
+    max-height: 52px;
+  }
+
+  .hero-image-main img {
+    height: 300px !important;
+  }
+
+  .logo-showcase-card img,
+  .save-contact-logo {
+    width: 100%;
+  }
+}
+
+/* V2.6.2 performance tuning
+   Responsive image variants are now selected via srcset/sizes.
+   Keep logo and hero image aspect handling stable. */
