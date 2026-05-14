@@ -1155,14 +1155,16 @@ figure.gallery-card {
 
 .owner-emblem {
   position: relative;
+  border-radius: 30px;
   z-index: 1;
-  width: min(190px, 58%);
+  /* width: min(190px, 58%); */
   height: auto;
   filter: drop-shadow(0 20px 34px rgba(54, 55, 41, 0.16));
 }
 
 .owner-stat-card {
-  position: absolute;
+  /* position: absolute; */
+  margin-top: 1.2rem;
   left: 1.2rem;
   right: 1.2rem;
   bottom: 1.2rem;
@@ -1277,10 +1279,6 @@ figure.gallery-card {
 
   .owner-visual-card {
     min-height: 260px;
-  }
-
-  .owner-emblem {
-    width: min(170px, 62%);
   }
 
   .owner-highlights {
