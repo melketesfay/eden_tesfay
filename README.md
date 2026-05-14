@@ -3,6 +3,7 @@
 Deploy-ready static website package.
 
 ## Public details included
+
 - Area: Everett / Silver Fir, Washington
 - License number: 758759
 - Home phone: (425) 332-3455
@@ -10,6 +11,7 @@ Deploy-ready static website package.
 - Email: restassuredafh@gmail.com
 
 ## Real photos added
+
 - `real-bedroom-guest-room.jpg` from `WhatsApp Image 2026-05-01 at 18.29.30 (1).jpeg` size (1800, 1012)
 - `real-bathroom-accessible-wide.jpg` from `WhatsApp Image 2026-05-01 at 18.29.30 (2).jpeg` size (1800, 1012)
 - `real-bedroom-care-bed.jpg` from `WhatsApp Image 2026-05-01 at 18.29.30.jpeg` size (1800, 1012)
@@ -27,27 +29,28 @@ Deploy-ready static website package.
 - `real-welcome-tray-portrait.jpg` from `WhatsApp Image 2026-05-01 at 18.29.35.jpeg` size (1152, 2048)
 
 ## Note
+
 The Google Maps embed uses the Everett / Silver Fir area, not an exact street address.
 
-
 ## V2.3 updates
+
 - Reintroduced the preferred emblem logo in the header and as favicon.
 - Added the full branded logo below the hero section.
 - Corrected all contact email references to restassuredafh@gmail.com.
 
-
 ## V2.4 updates
+
 - Added a lightweight lightbox for all real photos using filenames that contain `real-`.
 - Real photos can be opened larger by click/tap.
 - Lightbox closes via X button, outside click, or Escape key.
 - No asset changes required for this patch.
-
 
 ## QR code decision update
 
 The business card QR codes should use URL targets, not a full embedded vCard QR.
 
 ### Website QR
+
 Target URL:
 
 ```text
@@ -55,6 +58,7 @@ https://restassuredafh.com/
 ```
 
 ### Save Contact QR
+
 Target URL:
 
 ```text
@@ -233,3 +237,10 @@ This patch targets the remaining mobile Lighthouse image delivery warnings witho
 
 The logo images were intentionally not aggressively recompressed again because the previous aggressive compression visibly degraded the brand presentation.
 
+### Next Steps
+
+- Use preformance optimized version of assets/logo/favicon-rest-assured-afh.png
+- Use performance optimized version (size and resolution) eden-testfay-portrait.jpeg
+- Test total performance again
+- Better Favicon and Logo, preffrabley SVG
+- CDN and Cloudflare
