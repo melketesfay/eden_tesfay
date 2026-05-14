@@ -47,28 +47,46 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Rest Assured AFH",
-        "description": "Licensed adult family home care in Everett / Silver Firs, Washington.",
-        "url": "https://restassuredafh.com/",
-        "telephone": "+14253323455",
-        "email": "restassuredafh@gmail.com",
-        "image": "https://restassuredafh.com/assets/real-exterior-front.webp",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "5417 133rd St SE",
-          "addressLocality": "Everett",
-          "addressRegion": "WA",
-          "postalCode": "98208",
-          "addressCountry": "US"
-        },
-        "areaServed": [
-          "Everett, WA",
-          "Silver Firs, WA",
-          "Mill Creek, WA",
-          "Snohomish County, WA"
-        ],
-        "identifier": "License #758759"
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://restassuredafh.com/#business",
+            "name": "Rest Assured AFH",
+            "description": "Licensed adult family home care in Everett / Silver Firs, Washington.",
+            "url": "https://restassuredafh.com/",
+            "telephone": "+14253323455",
+            "email": "restassuredafh@gmail.com",
+            "image": "https://restassuredafh.com/assets/real-exterior-front.webp",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "5417 133rd St SE",
+              "addressLocality": "Everett",
+              "addressRegion": "WA",
+              "postalCode": "98208",
+              "addressCountry": "US"
+            },
+            "areaServed": [
+              "Everett, WA",
+              "Silver Firs, WA",
+              "Mill Creek, WA",
+              "Snohomish County, WA"
+            ],
+            "identifier": "License #758759",
+            "founder": {
+              "@id": "https://restassuredafh.com/#eden-tesfay"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://restassuredafh.com/#eden-tesfay",
+            "name": "Eden Tesfay",
+            "jobTitle": "Owner",
+            "worksFor": {
+              "@id": "https://restassuredafh.com/#business"
+            },
+            "description": "Owner of Rest Assured AFH with over 17 years of healthcare experience."
+          }
+        ]
       }
     </script>
   </head>
@@ -283,7 +301,69 @@
           />
         </div>
       </section>
-      <section class="section" data-reveal="" id="about">
+      <section
+        id="about"
+        class="section owner-section owner-spotlight"
+        data-reveal
+      >
+        <div class="container owner-spotlight-grid">
+          <div class="owner-visual-card" aria-hidden="true">
+            <div class="owner-visual-glow"></div>
+
+            <img
+              src="assets/logo-v23-emblem-display.webp"
+              alt=""
+              class="owner-emblem"
+              loading="lazy"
+              decoding="async"
+            />
+
+            <div class="owner-stat-card">
+              <strong>17+</strong>
+              <span>Years in healthcare</span>
+            </div>
+          </div>
+
+          <div class="owner-content-card">
+            <p class="eyebrow">Meet the Owner</p>
+            <h2>Experienced care, personally led.</h2>
+
+            <p class="owner-lead">
+              Rest Assured AFH is owner-led by Eden Tesfay, a healthcare
+              professional with over 17 years of experience in the healthcare
+              field.
+            </p>
+
+            <p>
+              Eden brings a calm, responsible and deeply personal approach to
+              care. Her experience helps guide the home’s daily routines,
+              communication with families, and attention to each resident’s
+              comfort, dignity and well-being.
+            </p>
+
+            <p>
+              Rest Assured AFH was created with a simple purpose: to offer a
+              warm, family-centered home where residents feel safe, respected
+              and genuinely cared for.
+            </p>
+
+            <blockquote class="owner-quote">
+              <p>
+                “My goal is to give families peace of mind that their loved ones
+                are safe, respected and cared for with patience and dignity.”
+              </p>
+              <cite>— Eden Tesfay, Owner</cite>
+            </blockquote>
+
+            <div class="owner-highlights">
+              <span>17+ years healthcare experience</span>
+              <span>Owner-led care</span>
+              <span>License #758759</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" data-reveal="" id="about-us">
         <div class="container two-col about-grid">
           <div>
             <p class="eyebrow">About Rest Assured AFH</p>
@@ -621,6 +701,14 @@
                 href="mailto:restassuredafh@gmail.com?subject=Tour%20Request%20-%20Rest%20Assured%20AFH"
               >
                 Email to Schedule a Tour
+              </a>
+
+              <a class="button button-secondary" href="tel:+12064033838">
+                Call Us
+              </a>
+
+              <a class="button button-secondary" href="/save-contact/">
+                Save Contact
               </a>
             </div>
             <p class="contact-note">
