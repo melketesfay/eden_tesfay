@@ -212,6 +212,10 @@ h3 {
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid var(--line);
 }
+.button-call:hover {
+  background: var(--paper);
+  color: var(--gold);
+}
 .hero-badges {
   display: flex;
   flex-wrap: wrap;
