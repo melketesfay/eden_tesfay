@@ -26,10 +26,15 @@
       />
     </noscript>
     <link
-      href="assets/logo/favicon-rest-assured-afh.png"
-      sizes="64x64"
       rel="icon"
       type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
     />
     <link href="style.css" rel="stylesheet" />
     <link href="https://restassuredafh.com/" rel="canonical" />
@@ -111,7 +116,7 @@
               decoding="async"
               height="253"
               loading="eager"
-              src="assets/logo-v23-emblem-display.webp"
+              src="assets/logo/generated/rest-assured-emblem-header.webp"
               width="180"
             />
           </span>
@@ -318,14 +323,21 @@
           <div class="owner-visual-card" aria-hidden="true">
             <div class="owner-visual-glow"></div>
 
-            <img
-              src="assets/eden-tesfay-portrait.jpeg"
-              height="700"
-              alt=""
-              class="owner-emblem"
-              loading="lazy"
-              decoding="async"
-            />
+            <picture>
+              <source
+                srcset="assets/owner/generated/eden-tesfay-owner-640.webp"
+                type="image/webp"
+              />
+              <img
+                src="assets/owner/generated/eden-tesfay-owner-640.webp"
+                alt="Eden Tesfay, owner of Rest Assured AFH"
+                class="owner-portrait"
+                width="640"
+                height="auto"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
 
             <div class="owner-stat-card">
               <strong>17+</strong>
