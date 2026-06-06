@@ -2,7 +2,7 @@
 
 Production static website for **Rest Assured AFH**, a licensed Adult Family Home in Everett, Washington.
 
-The site presents the home, owner-led care approach, real home photos, contact options, local SEO foundation, and a save-contact workflow for business card QR codes.
+The site presents the home, licensed nurse-led care approach, real home photos, contact options, local SEO foundation, and a save-contact workflow for business card QR codes.
 
 ## Live Site
 
@@ -22,7 +22,7 @@ https://restassuredafh.com/
 
 - Responsive static homepage.
 - Real home photo gallery with lightbox behavior.
-- Owner section for Eden Tesfay and 17+ years of healthcare experience.
+- Owner section for Eden Tesfay, a licensed nurse with 17+ years of healthcare experience.
 - Services overview for personal care, medication assistance, memory care support, respite care, hospice support, meals/nutrition, and housekeeping/laundry.
 - Local business SEO metadata and structured data.
 - `robots.txt` and `sitemap.xml`.

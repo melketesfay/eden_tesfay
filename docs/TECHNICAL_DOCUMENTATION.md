@@ -35,14 +35,12 @@
 
 ## Known Cleanup Items
 
-- Verify whether "nurse-led" wording is approved and documented before changing public copy.
+- Nurse-led wording is approved based on client confirmation that Eden Tesfay is a licensed nurse with a degree.
+- Do not remove nurse-led positioning unless the client changes this direction.
+- Do not specify an exact credential type or degree name, such as RN, LPN, BSN, or another title, until the exact credential wording is provided.
 - Replace any non-numeric image `height` attributes when site-code cleanup is approved.
 - Confirm whether homepage script loading should use `defer` to match prior performance notes.
 
 ## Pending Documentation
 
-- Confirm current production hosting details.
-- Confirm current Cloudflare settings.
-- Confirm current deployment workflow.
 - Document exact image optimization workflow.
-- Document any future Firebase Hosting setup after it is implemented.
