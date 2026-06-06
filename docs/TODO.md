@@ -13,8 +13,10 @@
 - [x] Run local Firebase Hosting preview.
 - [x] Deploy to a Firebase preview channel.
 - [x] Verify Firebase preview URL before DNS changes.
-- [ ] Plan GitHub Actions or Firebase GitHub deployment.
-- [ ] Configure Firebase Hosting GitHub integration for PR previews and `main` deploys.
+- [x] Plan GitHub Actions or Firebase GitHub deployment.
+- [x] Configure Firebase Hosting GitHub integration for PR previews and `main` deploys.
+- [ ] Verify GitHub Actions PR preview workflow after opening this branch as a pull request.
+- [ ] Verify GitHub Actions live deploy workflow after merging to `main`.
 - [ ] Add `restassuredafh.com` as a Firebase Hosting custom domain after preview validation.
 - [ ] Verify Cloudflare DNS records and SSL/TLS Full strict mode.
 - [ ] Smoke-test production after any DNS migration.

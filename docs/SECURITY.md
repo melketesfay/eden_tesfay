@@ -29,6 +29,12 @@ Preferred options:
 - Use Firebase Hosting GitHub integration, which configures the required GitHub secret automatically.
 - If writing GitHub Actions manually, store credentials only in GitHub Secrets.
 
+Current GitHub secret created by Firebase CLI:
+
+```text
+FIREBASE_SERVICE_ACCOUNT_REST_ASSURED_AFH_WEBSITE
+```
+
 Rules:
 
 - Never commit `serviceAccount*.json`.
@@ -36,6 +42,7 @@ Rules:
 - Never commit Firebase refresh tokens.
 - Never expose project billing or private infrastructure details in public docs.
 - Review generated GitHub Actions before committing them.
+- Revoke the Firebase CLI GitHub OAuth authorization after setup if it is no longer needed.
 
 ## Cloudflare Security
 
@@ -73,4 +80,4 @@ Do not add a strict Content Security Policy blindly because the site uses Google
 - Document the final DNS and deployment rollback plan.
 - Add security header recommendations after hosting is confirmed.
 - Define backup and recovery steps for future production changes.
-- Confirm GitHub Secrets names after Firebase GitHub integration is configured.
+- Confirm GitHub Actions logs do not expose secrets after the first preview and live deploy runs.

@@ -130,28 +130,32 @@ Note: The preview deploy may warn that it cannot sync Firebase Auth domains if F
 
 ## GitHub Deployment Direction
 
-Preferred CI/CD direction:
+CI/CD is configured through Firebase Hosting GitHub integration.
 
-- Use Firebase Hosting GitHub integration.
-- Pull requests create preview deployments.
-- Merges to `main` deploy to the live Firebase Hosting channel.
-- Deployment credentials are managed by Firebase/GitHub integration or GitHub Secrets.
+Generated workflow files:
 
-Do not commit service account JSON files.
+- `.github/workflows/firebase-hosting-pull-request.yml`
+- `.github/workflows/firebase-hosting-merge.yml`
 
-Expected setup command after Firebase CLI authentication:
+Workflow behavior:
+
+- Pull requests from this repository create Firebase Hosting preview deployments.
+- Pushes to `main` deploy to the Firebase Hosting live channel.
+- No build step runs because this is a static site without a build system.
+- Deployment credentials are stored in GitHub as `FIREBASE_SERVICE_ACCOUNT_REST_ASSURED_AFH_WEBSITE`.
+- No service account JSON file is committed to the repository.
+
+Firebase CLI setup command used:
 
 ```bash
 firebase init hosting:github
 ```
 
-Use the existing static-site answers:
+The Firebase CLI GitHub OAuth authorization can be revoked here after setup if desired:
 
-- Public directory: `.`
-- Configure as single-page app: `No`
-- Set up automatic builds and deploys with GitHub: `Yes`
-
-Review generated GitHub Actions workflows before committing them.
+```text
+https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+```
 
 ## Custom Domain Migration
 
@@ -228,4 +232,5 @@ If Firebase custom-domain migration fails:
 - Install and authenticate the Firebase CLI.
 - Run a local Firebase Hosting preview.
 - Deploy to a Firebase preview channel.
-- Configure Firebase GitHub integration after the manual preview deployment works.
+- Confirm GitHub Actions PR preview workflow after opening the next pull request.
+- Confirm GitHub Actions live deploy workflow after merging to `main`.
