@@ -17,7 +17,7 @@
 
 ## Hosting and DNS Notes
 
-- Cloudflare SSL should remain Full (strict) where Cloudflare is used.
+- Cloudflare SSL should remain Full (strict) if Cloudflare proxying is used.
 - Do not weaken SSL/DNS settings to make deployment easier.
 - Do not expose home-hosted services directly if a static hosting provider can serve production.
 - Test production redirects, `robots.txt`, `sitemap.xml`, and the save-contact workflow after DNS or hosting changes.
@@ -50,6 +50,8 @@ Rules:
 - Do not switch to Flexible SSL.
 - Keep Firebase-required TXT records in DNS when using Firebase custom domains.
 - Test HTTPS redirects, canonical host behavior, `robots.txt`, and `sitemap.xml` after DNS changes.
+- The Firebase Hosting records for `restassuredafh.com` and `www.restassuredafh.com` are currently DNS-only so Firebase can manage certificates directly.
+- Do not re-enable Cloudflare proxying for Firebase Hosting records without retesting HTTPS certificates, redirects, caching, and contact/vCard routes.
 
 ## Server Hardening Notes
 
@@ -76,8 +78,8 @@ Do not add a strict Content Security Policy blindly because the site uses Google
 
 ## Pending Security Work
 
-- Verify current production hosting and Cloudflare configuration.
-- Document the final DNS and deployment rollback plan.
+- Confirm whether the old home-hosted setup remains as fallback or is retired.
+- Confirm Cloudflare SSL/TLS mode remains Full strict if proxying is re-enabled.
 - Add security header recommendations after hosting is confirmed.
 - Define backup and recovery steps for future production changes.
-- Confirm GitHub Actions logs do not expose secrets after the first preview and live deploy runs.
+- Confirm GitHub Actions logs do not expose secrets during routine future deploy reviews.
