@@ -6,8 +6,18 @@
 - [x] Move useful history from the old `README.md` into `docs/PROJECT_HISTORY.md`.
 - [x] Move roadmap, security, deployment, and maintenance notes from the temporary roadmap README into the relevant docs.
 - [ ] Confirm current production hosting and Cloudflare configuration.
-- [ ] Evaluate Firebase Hosting for the static site.
+- [x] Add initial Firebase Hosting repository config.
+- [ ] Create or select the Firebase project.
+- [ ] Install and authenticate Firebase CLI.
+- [ ] Add `.firebaserc` after confirming the real Firebase project ID.
+- [ ] Run local Firebase Hosting preview.
+- [ ] Deploy to a Firebase preview channel.
+- [ ] Verify Firebase preview URL before DNS changes.
 - [ ] Plan GitHub Actions or Firebase GitHub deployment.
+- [ ] Configure Firebase Hosting GitHub integration for PR previews and `main` deploys.
+- [ ] Add `restassuredafh.com` as a Firebase Hosting custom domain after preview validation.
+- [ ] Verify Cloudflare DNS records and SSL/TLS Full strict mode.
+- [ ] Smoke-test production after any DNS migration.
 - [ ] Audit current local SEO visibility and Google Business Profile.
 
 ## Site Follow-Ups To Review

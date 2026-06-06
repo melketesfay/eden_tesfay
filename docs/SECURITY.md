@@ -7,6 +7,8 @@
 - Store deployment credentials in GitHub Secrets or through the Firebase/GitHub integration.
 - Keep the public repository free of private infrastructure details.
 - Keep deployment and infrastructure credentials outside committed documentation.
+- Do not commit Firebase service account JSON files.
+- Do not paste Firebase tokens into scripts, markdown, or workflow files.
 
 ## Static Site Risk Profile
 
@@ -19,6 +21,28 @@
 - Do not weaken SSL/DNS settings to make deployment easier.
 - Do not expose home-hosted services directly if a static hosting provider can serve production.
 - Test production redirects, `robots.txt`, `sitemap.xml`, and the save-contact workflow after DNS or hosting changes.
+
+## Firebase Deployment Secrets
+
+Preferred options:
+
+- Use Firebase Hosting GitHub integration, which configures the required GitHub secret automatically.
+- If writing GitHub Actions manually, store credentials only in GitHub Secrets.
+
+Rules:
+
+- Never commit `serviceAccount*.json`.
+- Never commit `.env`.
+- Never commit Firebase refresh tokens.
+- Never expose project billing or private infrastructure details in public docs.
+- Review generated GitHub Actions before committing them.
+
+## Cloudflare Security
+
+- Keep SSL/TLS mode on Full (strict) when Cloudflare proxies the production domain.
+- Do not switch to Flexible SSL.
+- Keep Firebase-required TXT records in DNS when using Firebase custom domains.
+- Test HTTPS redirects, canonical host behavior, `robots.txt`, and `sitemap.xml` after DNS changes.
 
 ## Server Hardening Notes
 
@@ -49,3 +73,4 @@ Do not add a strict Content Security Policy blindly because the site uses Google
 - Document the final DNS and deployment rollback plan.
 - Add security header recommendations after hosting is confirmed.
 - Define backup and recovery steps for future production changes.
+- Confirm GitHub Secrets names after Firebase GitHub integration is configured.
