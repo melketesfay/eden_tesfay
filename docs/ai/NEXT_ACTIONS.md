@@ -16,12 +16,9 @@ This file lists concrete next actions for future AI sessions. Keep it short and 
 
 ## Immediate Actions
 
-1. Confirm Cloudflare SSL/TLS mode remains Full strict if Cloudflare proxying is re-enabled.
-2. Decide whether to revoke the Firebase CLI GitHub OAuth authorization after setup.
-3. Keep any home-server fallback activation runbook in private operational notes, not this public repository.
-4. Review whether "nurse-led" wording is approved and documented.
-5. Check and fix non-numeric image height attributes if confirmed as a cleanup task.
-6. Confirm homepage `script.js` loading behavior against performance notes.
+1. Check and fix non-numeric image height attributes if confirmed as a cleanup task.
+2. Confirm homepage `script.js` loading behavior against performance notes.
+3. Audit current local SEO visibility and Google Business Profile.
 
 ## SEO Next Actions
 

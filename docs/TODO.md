@@ -22,14 +22,14 @@
 - [x] Verify Cloudflare DNS records for Firebase Hosting.
 - [x] Smoke-test production after DNS migration.
 - [x] Decide to keep the old home-hosted setup as fallback/rollback only.
-- [ ] Confirm Cloudflare SSL/TLS mode remains Full strict if proxying is re-enabled.
-- [ ] Decide whether to revoke the Firebase CLI GitHub OAuth authorization after setup.
-- [ ] Keep any home-server fallback activation runbook in private operational notes.
+- [x] Confirm Cloudflare SSL/TLS mode remains Full strict if proxying is re-enabled.
+- [x] Decide whether to revoke the Firebase CLI GitHub OAuth authorization after setup.
+- [x] Keep any home-server fallback activation runbook in private operational notes.
 - [ ] Audit current local SEO visibility and Google Business Profile.
 
 ## Site Follow-Ups To Review
 
-- [ ] Verify whether "nurse-led" wording is approved and documented.
+- [x] Confirm "nurse-led" wording is approved and document Eden as a licensed nurse.
 - [ ] Fix non-numeric image height attributes if confirmed as a cleanup task.
 - [ ] Confirm homepage `script.js` loading behavior against performance notes.
 

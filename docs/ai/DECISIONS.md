@@ -18,18 +18,20 @@ Reason: Current needs are informational: business presentation, contact, local S
 
 ### Business positioning
 
-Decision: Position the business as a licensed, owner-led Adult Family Home in Everett, WA, with a warm, home-like, family-centered care environment.
+Decision: Position the business as a licensed, nurse-led Adult Family Home in Everett, WA, with a warm, home-like, family-centered care environment.
 
 Known claims allowed:
 
 - licensed Adult Family Home
 - License #758759
 - owner-led care
+- nurse-led care
+- Eden Tesfay is a licensed nurse with a degree
 - Eden Tesfay has 17+ years in healthcare
 - Everett / Silver Firs local relevance
 - personal care, medication assistance, memory care support, respite care, hospice support, meals/nutrition, housekeeping/laundry
 
-Do not invent additional claims.
+Do not invent additional claims. Do not use a specific credential abbreviation or degree title, such as RN, LPN, BSN, or another title, until the exact wording is confirmed.
 
 ### Domain
 
@@ -47,7 +49,7 @@ Reason: A direct QR to a `.vcf` file is less user-friendly and less brand-buildi
 
 ### Owner content
 
-Decision: Include owner-led trust messaging around Eden Tesfay and 17+ years of healthcare experience.
+Decision: Include nurse-led and owner-led trust messaging around Eden Tesfay and 17+ years of healthcare experience.
 
 Known prior owner-section direction:
 

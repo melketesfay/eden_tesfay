@@ -18,6 +18,7 @@ Known business details from project discussions:
 - License: **#758759**
 - Owner: **Eden Tesfay**
 - Owner experience: **17+ years in healthcare**
+- Owner credential: **licensed nurse with a degree**. The exact public credential wording (for example RN, LPN, BSN, or another title) still needs explicit confirmation before using a specific abbreviation or degree name.
 - Phone: **+1 (425) 332-3455**
 - Mobile: **+1 (206) 403-3838**
 - Email: **restassuredafh@gmail.com**
@@ -25,6 +26,7 @@ Known business details from project discussions:
 Known positioning/services from prior work:
 
 - owner-led care
+- licensed nurse-led care
 - warm home-like setting
 - family-centered care
 - calm residential environment
@@ -36,7 +38,7 @@ Known positioning/services from prior work:
 - meals/nutrition
 - housekeeping/laundry
 
-Do not invent medical claims, guarantees, staff credentials, availability, pricing, resident capacity, testimonials, certifications, or services beyond what is documented or explicitly provided.
+Do not invent medical claims, guarantees, staff credentials, availability, pricing, resident capacity, testimonials, certifications, or services beyond what is documented or explicitly provided. Nurse-led positioning is approved because Eden Tesfay is confirmed as a licensed nurse with a degree, but do not invent the exact license abbreviation or degree title.
 
 ## Language and tone
 

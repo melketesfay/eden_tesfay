@@ -26,6 +26,7 @@ The project serves two purposes:
 - Mobile: +1 (206) 403-3838
 - Email: restassuredafh@gmail.com
 - Owner experience: 17+ years in healthcare
+- Owner credential: licensed nurse with a degree. The exact public credential wording, such as RN, LPN, BSN, or another title, still needs explicit confirmation before using that abbreviation or degree name.
 - Location focus: Everett, Silver Firs, nearby Seattle area where relevant
 - Business type: licensed Adult Family Home / residential senior care
 
@@ -34,6 +35,7 @@ Known services/positioning:
 - adult family home care
 - residential senior care
 - owner-led care
+- licensed nurse-led care
 - personal care
 - medication assistance
 - memory care support
@@ -123,14 +125,10 @@ Completed foundation work:
 
 Current priorities:
 
-1. Finish post-migration cleanup.
-2. Confirm Cloudflare SSL/TLS mode remains Full strict if proxying is re-enabled.
-3. Decide whether to revoke the Firebase CLI GitHub OAuth authorization after setup.
-4. Keep any home-server fallback runbook in private operational notes, not this public repository.
-5. Review site follow-ups: "nurse-led" wording, non-numeric image heights, and `script.js` loading behavior.
-6. Audit local SEO visibility and Google Business Profile.
-7. Later implement local SEO improvements.
-8. Later do V2 design overhaul.
+1. Review remaining site follow-ups: non-numeric image heights and `script.js` loading behavior.
+2. Audit local SEO visibility and Google Business Profile.
+3. Later implement local SEO improvements.
+4. Later do V2 design overhaul.
 
 ## Recommended repository name
 
