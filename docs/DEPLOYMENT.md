@@ -28,19 +28,18 @@ Current repo preparation:
 - `hosting.public` is set to `.` because production files currently live at the repo root.
 - `cleanUrls` and `trailingSlash` are enabled.
 - No single-page-app rewrite is configured.
-- `.firebaserc` is intentionally not committed yet because the real Firebase project ID is not confirmed.
+- `.firebaserc` links the repository to the Firebase project `rest-assured-afh-website`.
+- Preview channel `setup-preview` has been deployed and validated.
 
-When a Firebase project is selected, `.firebaserc` should be added with this shape:
+Current `.firebaserc` shape:
 
 ```json
 {
   "projects": {
-    "default": "YOUR_FIREBASE_PROJECT_ID"
+    "default": "rest-assured-afh-website"
   }
 }
 ```
-
-Replace `YOUR_FIREBASE_PROJECT_ID` with the actual Firebase project ID before committing.
 
 ## Firebase Config Behavior
 
@@ -61,9 +60,33 @@ Caching approach:
 - `style.css` and `script.js` use short caching because filenames are not content-hashed.
 - HTML, `robots.txt`, `sitemap.xml`, and `downloads/contact.vcf` use conservative revalidation.
 
+Validated preview URL:
+
+```text
+https://rest-assured-afh-website--setup-preview-yw7ylqac.web.app/
+```
+
+Preview channel expiration:
+
+```text
+2026-06-13 21:00:02
+```
+
+Validated preview checks:
+
+- `/` returns `200`.
+- `/save-contact/` returns `200`.
+- `/downloads/contact.vcf` returns `200`.
+- `/robots.txt` returns `200`.
+- `/sitemap.xml` returns `200`.
+- `docs/TODO.md`, `README.md`, `business_card/website_qr.svg`, `firebase.json`, and `.firebaserc` return `404`.
+- Homepage, gallery/lightbox, save-contact page, contact buttons, and vCard download were manually checked in browser.
+
+The Firebase preview response includes `x-robots-tag: noindex`, which is appropriate for a temporary test URL.
+
 ## Manual Setup Workflow
 
-Run these only after the documentation branch is merged and a Firebase project is available.
+Run these after the Firebase CLI is available.
 
 1. Install Firebase CLI if it is not installed.
 
@@ -77,23 +100,33 @@ npm install -g firebase-tools
 firebase login
 ```
 
-3. Select or create a Firebase project in the Firebase Console.
+3. Confirm the selected Firebase project:
 
-4. Add `.firebaserc` with the confirmed project ID.
+```bash
+firebase use
+```
 
-5. Test locally.
+Expected project:
+
+```text
+rest-assured-afh-website
+```
+
+4. Test locally.
 
 ```bash
 firebase emulators:start --only hosting
 ```
 
-6. Deploy to a preview channel first.
+5. Deploy to a preview channel first.
 
 ```bash
 firebase hosting:channel:deploy preview
 ```
 
-7. Test the Firebase-generated preview URL before any production DNS change.
+6. Test the Firebase-generated preview URL before any production DNS change.
+
+Note: The preview deploy may warn that it cannot sync Firebase Auth domains if Firebase Authentication is not configured. That warning is acceptable for this static site because it does not use Firebase Auth.
 
 ## GitHub Deployment Direction
 
@@ -189,8 +222,10 @@ If Firebase custom-domain migration fails:
 
 ## Pending Setup
 
-- Confirm whether a Firebase project already exists.
+- Firebase project exists: `rest-assured-afh-website`.
 - Confirm current Cloudflare DNS records and SSL settings.
 - Confirm whether the home-hosted setup remains as fallback or is retired.
-- Add `.firebaserc` after the real Firebase project ID is known.
+- Install and authenticate the Firebase CLI.
+- Run a local Firebase Hosting preview.
+- Deploy to a Firebase preview channel.
 - Configure Firebase GitHub integration after the manual preview deployment works.
