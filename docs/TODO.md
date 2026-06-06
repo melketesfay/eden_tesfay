@@ -5,7 +5,7 @@
 - [x] Rewrite `README.md` as a concise public project overview.
 - [x] Move useful history from the old `README.md` into `docs/PROJECT_HISTORY.md`.
 - [x] Move roadmap, security, deployment, and maintenance notes from the temporary roadmap README into the relevant docs.
-- [ ] Confirm current production hosting and Cloudflare configuration.
+- [x] Confirm current production hosting and Cloudflare DNS configuration.
 - [x] Add initial Firebase Hosting repository config.
 - [x] Create or select the Firebase project: `rest-assured-afh-website`.
 - [x] Install and authenticate Firebase CLI.
@@ -15,11 +15,15 @@
 - [x] Verify Firebase preview URL before DNS changes.
 - [x] Plan GitHub Actions or Firebase GitHub deployment.
 - [x] Configure Firebase Hosting GitHub integration for PR previews and `main` deploys.
-- [ ] Verify GitHub Actions PR preview workflow after opening this branch as a pull request.
-- [ ] Verify GitHub Actions live deploy workflow after merging to `main`.
-- [ ] Add `restassuredafh.com` as a Firebase Hosting custom domain after preview validation.
-- [ ] Verify Cloudflare DNS records and SSL/TLS Full strict mode.
-- [ ] Smoke-test production after any DNS migration.
+- [x] Verify GitHub Actions PR preview workflow after opening this branch as a pull request.
+- [x] Verify GitHub Actions live deploy workflow after merging to `main`.
+- [x] Add `restassuredafh.com` as a Firebase Hosting custom domain after preview validation.
+- [x] Configure `www.restassuredafh.com` to redirect to `https://restassuredafh.com/`.
+- [x] Verify Cloudflare DNS records for Firebase Hosting.
+- [x] Smoke-test production after DNS migration.
+- [ ] Confirm Cloudflare SSL/TLS mode remains Full strict if proxying is re-enabled.
+- [ ] Decide whether the old home-hosted setup should remain as fallback or be retired.
+- [ ] Decide whether to revoke the Firebase CLI GitHub OAuth authorization after setup.
 - [ ] Audit current local SEO visibility and Google Business Profile.
 
 ## Site Follow-Ups To Review

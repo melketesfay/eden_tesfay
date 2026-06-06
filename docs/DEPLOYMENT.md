@@ -2,13 +2,13 @@
 
 ## Current Status
 
-Deployment details still need production verification before this file is treated as final runbook documentation.
+Production hosting has been migrated to Firebase Hosting and verified on the live custom domain.
 
 Known context:
 
 - The website is a static HTML/CSS/JavaScript site.
-- The site has been discussed as home-hosted behind Cloudflare.
-- Firebase Hosting is the preferred planned target for static hosting.
+- Firebase Hosting is the production static host.
+- Cloudflare remains the DNS provider.
 - Cloud Run is not needed for the current static site.
 - The repository should remain the source of truth for production files.
 
@@ -30,6 +30,7 @@ Current repo preparation:
 - No single-page-app rewrite is configured.
 - `.firebaserc` links the repository to the Firebase project `rest-assured-afh-website`.
 - Preview channel `setup-preview` has been deployed and validated.
+- The live custom domain `restassuredafh.com` has been connected and verified.
 
 Current `.firebaserc` shape:
 
@@ -144,6 +145,7 @@ Workflow behavior:
 - No build step runs because this is a static site without a build system.
 - Deployment credentials are stored in GitHub as `FIREBASE_SERVICE_ACCOUNT_REST_ASSURED_AFH_WEBSITE`.
 - No service account JSON file is committed to the repository.
+- The first pull request preview workflow and first `main` live deployment workflow completed successfully.
 
 Firebase CLI setup command used:
 
@@ -159,7 +161,7 @@ https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
 
 ## Custom Domain Migration
 
-Do not start this step until the Firebase preview URL works.
+Firebase Hosting is connected to the live custom domain.
 
 Target domain:
 
@@ -167,14 +169,15 @@ Target domain:
 restassuredafh.com
 ```
 
-Migration checklist:
+Current DNS shape:
 
-- Add the custom domain in Firebase Hosting.
-- Follow the DNS records shown by Firebase.
-- Keep Cloudflare SSL/TLS mode on Full (strict).
-- Keep Firebase's required verification TXT records in DNS.
-- Do not remove the old production route until the Firebase-hosted site has been tested.
-- Expect DNS and certificate provisioning to take time.
+- `restassuredafh.com` uses an `A` record to `199.36.158.100`.
+- `www.restassuredafh.com` uses a `CNAME` record to `rest-assured-afh-website.web.app`.
+- Firebase redirects `www.restassuredafh.com` to `https://restassuredafh.com/`.
+- Firebase's TXT verification record remains in DNS.
+- The existing Google Search Console TXT verification record remains in DNS.
+- Firebase website records are currently DNS-only in Cloudflare so Firebase can manage certificates directly.
+- Do not add old Cloudflare/home-origin `A` or `AAAA` records back to the Firebase-hosted domain.
 
 Post-migration smoke checks:
 
@@ -195,9 +198,18 @@ Also verify in a browser:
 - Map and external links still behave correctly.
 - Canonical URLs still point to `https://restassuredafh.com/`.
 
+Validated production checks on 2026-06-06:
+
+- `https://restassuredafh.com/` returns `200`.
+- `https://www.restassuredafh.com/` returns `301` to `https://restassuredafh.com/`.
+- `https://restassuredafh.com/save-contact/` returns `200`.
+- `https://restassuredafh.com/downloads/contact.vcf` returns `200`.
+- `https://restassuredafh.com/robots.txt` returns `200`.
+- `https://restassuredafh.com/sitemap.xml` returns `200`.
+
 ## Cloudflare Direction
 
-Cloudflare may remain responsible for DNS, CDN, and edge security.
+Cloudflare remains responsible for DNS. The Firebase Hosting records are currently set to DNS-only.
 
 Official reference:
 
@@ -205,13 +217,14 @@ Official reference:
 
 Recommended settings to preserve or verify:
 
-- SSL/TLS mode: Full (strict).
+- SSL/TLS mode: Full (strict) if Cloudflare proxying is later enabled.
 - Always Use HTTPS enabled if tested.
 - Brotli enabled.
 - HTTP/2 enabled.
 - HTTP/3 enabled if available and tested.
 - Rocket Loader off unless specifically tested.
 - Do not aggressively cache HTML until deployment behavior is proven.
+- Do not enable the Cloudflare proxy for Firebase Hosting records without retesting certificate provisioning, redirects, and cache behavior.
 
 ## Rollback Plan
 
@@ -227,10 +240,6 @@ If Firebase custom-domain migration fails:
 ## Pending Setup
 
 - Firebase project exists: `rest-assured-afh-website`.
-- Confirm current Cloudflare DNS records and SSL settings.
-- Confirm whether the home-hosted setup remains as fallback or is retired.
-- Install and authenticate the Firebase CLI.
-- Run a local Firebase Hosting preview.
-- Deploy to a Firebase preview channel.
-- Confirm GitHub Actions PR preview workflow after opening the next pull request.
-- Confirm GitHub Actions live deploy workflow after merging to `main`.
+- Confirm whether the old home-hosted setup remains as a fallback or is retired.
+- Confirm Cloudflare SSL/TLS mode remains Full (strict) if proxying is re-enabled.
+- Decide whether to revoke the Firebase CLI GitHub OAuth authorization after setup.
