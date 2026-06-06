@@ -20,6 +20,7 @@
 - Cloudflare SSL should remain Full (strict) if Cloudflare proxying is used.
 - Do not weaken SSL/DNS settings to make deployment easier.
 - Do not expose home-hosted services directly if a static hosting provider can serve production.
+- Treat the old home-hosted setup as a fallback only; do not publish private IPs, credentials, tunnel details, or local network details in this public repository.
 - Test production redirects, `robots.txt`, `sitemap.xml`, and the save-contact workflow after DNS or hosting changes.
 
 ## Firebase Deployment Secrets
@@ -78,8 +79,8 @@ Do not add a strict Content Security Policy blindly because the site uses Google
 
 ## Pending Security Work
 
-- Confirm whether the old home-hosted setup remains as fallback or is retired.
 - Confirm Cloudflare SSL/TLS mode remains Full strict if proxying is re-enabled.
 - Add security header recommendations after hosting is confirmed.
 - Define backup and recovery steps for future production changes.
+- Keep any home-server fallback activation runbook in private operational notes, not in this public repository.
 - Confirm GitHub Actions logs do not expose secrets during routine future deploy reviews.
