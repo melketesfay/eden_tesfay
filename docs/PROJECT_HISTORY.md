@@ -54,9 +54,14 @@ This file preserves implementation history that is too detailed for the public R
 
 ## Infrastructure History
 
-- The site has been discussed as home-hosted behind Cloudflare.
+- The site was previously home-hosted behind Cloudflare.
 - Prior production tuning discussed or used Nginx caching/compression and HTTP/2.
-- Firebase Hosting is now the preferred planned static-hosting direction.
+- Firebase Hosting was selected as the production static-hosting platform.
+- GitHub Actions/Firebase Hosting integration was configured for pull request previews and live deploys from `main`.
+- `restassuredafh.com` was migrated to Firebase Hosting and verified.
+- `www.restassuredafh.com` was configured to redirect to `https://restassuredafh.com/`.
+- Cloudflare remains the DNS provider.
+- The previous home-hosted setup is retained only as a fallback/rollback option.
 - Cloud Run was discussed but is not currently needed for the static website.
 
 ## Migrated Documentation Notes

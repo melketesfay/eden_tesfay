@@ -109,18 +109,26 @@ A more detailed technical/project-history record should be moved to documentatio
 
 The user wants to professionalize the project before the next design overhaul.
 
-Immediate priorities from the latest planning discussion:
+Completed foundation work:
 
-1. Rename the GitHub repository to something more professional.
-2. Rewrite the README to be user/employer/portfolio-oriented.
-3. Move detailed technical/progress documentation into industry-style docs.
-4. Create/update AI memory files:
-   - `AGENTS.md`
-   - `docs/ai/HANDOFF.md`
-   - `docs/ai/DECISIONS.md`
-   - `docs/ai/NEXT_ACTIONS.md`
-5. Document SEO issues and create a `TODO.md`/SEO plan.
-6. Evaluate Firebase Hosting and GitHub Actions CI/CD.
+- GitHub repository renamed to `rest-assured-afh-website`.
+- README rewritten as a public project overview.
+- Project documentation moved into `docs/`.
+- AI memory files added under `docs/ai/`.
+- Firebase Hosting configured for the static site.
+- GitHub Actions/Firebase Hosting integration configured for PR previews and `main` deploys.
+- `restassuredafh.com` connected to Firebase Hosting.
+- `www.restassuredafh.com` redirects to `https://restassuredafh.com/`.
+- Previous home-hosted setup is retained only as a fallback/rollback option.
+
+Current priorities:
+
+1. Finish post-migration cleanup.
+2. Confirm Cloudflare SSL/TLS mode remains Full strict if proxying is re-enabled.
+3. Decide whether to revoke the Firebase CLI GitHub OAuth authorization after setup.
+4. Keep any home-server fallback runbook in private operational notes, not this public repository.
+5. Review site follow-ups: "nurse-led" wording, non-numeric image heights, and `script.js` loading behavior.
+6. Audit local SEO visibility and Google Business Profile.
 7. Later implement local SEO improvements.
 8. Later do V2 design overhaul.
 
@@ -172,17 +180,21 @@ Important caution: local map pack rankings cannot be directly forced. Work must 
 
 No spam tactics.
 
-## Current deployment concern
+## Current deployment state
 
-The site is currently home-hosted or has been home-hosted behind Cloudflare. The user wants to verify whether static hosting through Google/Firebase can be free or very low cost and more professional.
+The site is now hosted on Firebase Hosting with GitHub-based deployment.
 
-Current recommendation from prior planning:
+Current stack:
 
-- Use **Firebase Hosting** for the static website.
-- Keep Cloud Run for future dynamic/API/backend needs, not for the current static site.
-- Add GitHub Actions or Firebase GitHub integration so push/merge to `main` triggers deployment.
-- First deploy to Firebase test URL.
-- Only then switch custom domain/DNS.
+- GitHub is the source of truth.
+- Pull requests create Firebase Hosting preview deployments.
+- Merges to `main` deploy to the Firebase Hosting live channel.
+- Firebase Hosting serves the static site.
+- `restassuredafh.com` is the live custom domain.
+- `www.restassuredafh.com` redirects to `https://restassuredafh.com/`.
+- Cloudflare remains DNS provider.
+- Firebase Hosting records are currently DNS-only in Cloudflare so Firebase can manage certificates directly.
+- The previous home-hosted setup is fallback/rollback only, not the active production origin.
 
 ## Known risks
 

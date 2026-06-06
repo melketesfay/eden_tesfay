@@ -63,7 +63,7 @@ Do not invent a medical title or license for Eden unless provided.
 
 ### Static hosting direction
 
-Decision: Evaluate/migrate to **Firebase Hosting** rather than Cloud Run for the current static site.
+Decision: Use **Firebase Hosting** rather than Cloud Run for the current static site.
 
 Reason:
 
@@ -75,19 +75,21 @@ Cloud Run remains a possible future option if backend/API functionality is added
 
 ### Deployment direction
 
-Decision: Target CI/CD from GitHub.
+Decision: Use CI/CD from GitHub through Firebase Hosting GitHub integration.
 
-Expected target:
+Current behavior:
 
-- push or merge to `main` triggers production deploy
-- pull requests can create preview deployments if configured
+- pull requests create Firebase Hosting preview deployments
+- merges to `main` deploy to the Firebase Hosting live channel
+- `restassuredafh.com` is connected as the live custom domain
+- `www.restassuredafh.com` redirects to `https://restassuredafh.com/`
 - deployment should be documented in `docs/DEPLOYMENT.md`
 
-No confirmed Firebase/GitHub Actions implementation is known yet.
+Deployment credentials are stored in GitHub Secrets through the Firebase/GitHub integration. No service account JSON file should be committed.
 
 ### Cloudflare
 
-Decision: Use Cloudflare carefully as DNS/CDN/proxy layer where appropriate.
+Decision: Use Cloudflare carefully as DNS provider and, where appropriate, CDN/proxy layer.
 
 Known prior recommendations:
 
@@ -99,6 +101,8 @@ Known prior recommendations:
 - Cache static assets.
 - Do not cache HTML aggressively until the deployment model is clear.
 - Avoid Cloudflare-managed robots/content-signal injection if it causes SEO validation issues.
+- Firebase Hosting records are currently DNS-only in Cloudflare so Firebase can manage certificates directly.
+- Do not re-enable Cloudflare proxying for Firebase Hosting records without retesting certificates, redirects, caching, and contact/vCard routes.
 
 Known issue: Cloudflare managed Content Signals previously inserted a robots/content-signal directive that Lighthouse flagged. Disabling it restored SEO score.
 
@@ -128,15 +132,13 @@ Known prior work included:
 
 ### Repo name
 
-Decision: Rename repository to a professional, descriptive name.
+Decision: Use a professional, descriptive repository name.
 
-Recommended:
+Current repository:
 
 ```text
 rest-assured-afh-website
 ```
-
-Current repo name appears to be owner-name based and is not descriptive enough for a GitHub portfolio.
 
 ## Documentation decisions
 
@@ -236,14 +238,10 @@ Only create the second page if it can be substantially useful and not duplicate/
 
 These need verification or final choice:
 
-1. Exact current GitHub repository name and new remote URL after rename.
-2. Whether Firebase Hosting will become production host or just backup.
-3. Whether Cloudflare remains proxy in front of Firebase.
-4. Exact GitHub Actions workflow style:
-   - Firebase auto-created workflow via `firebase init hosting:github`
-   - or manually written workflow
-5. Whether to create a separate SEO landing page before or after Firebase migration.
-6. Current Google Business Profile category/service configuration.
-7. Whether a Search Console property already exists.
-8. Whether Analytics is desired.
-9. Whether to use only Firebase Hosting or also preserve home-hosted fallback.
+1. Whether Cloudflare proxying should remain off for Firebase Hosting records or be re-tested later.
+2. Whether to revoke the Firebase CLI GitHub OAuth authorization now that GitHub Actions are configured.
+3. Whether to create a separate SEO landing page before broader on-page SEO changes.
+4. Current Google Business Profile category/service configuration.
+5. Whether a Search Console property already exists and is fully verified.
+6. Whether Analytics is desired.
+7. Whether the home-server fallback runbook should be maintained in private operational notes.

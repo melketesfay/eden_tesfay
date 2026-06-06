@@ -21,9 +21,10 @@
 - [x] Configure `www.restassuredafh.com` to redirect to `https://restassuredafh.com/`.
 - [x] Verify Cloudflare DNS records for Firebase Hosting.
 - [x] Smoke-test production after DNS migration.
+- [x] Decide to keep the old home-hosted setup as fallback/rollback only.
 - [ ] Confirm Cloudflare SSL/TLS mode remains Full strict if proxying is re-enabled.
-- [ ] Decide whether the old home-hosted setup should remain as fallback or be retired.
 - [ ] Decide whether to revoke the Firebase CLI GitHub OAuth authorization after setup.
+- [ ] Keep any home-server fallback activation runbook in private operational notes.
 - [ ] Audit current local SEO visibility and Google Business Profile.
 
 ## Site Follow-Ups To Review

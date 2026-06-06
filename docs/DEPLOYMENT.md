@@ -9,6 +9,7 @@ Known context:
 - The website is a static HTML/CSS/JavaScript site.
 - Firebase Hosting is the production static host.
 - Cloudflare remains the DNS provider.
+- The previous home-hosted setup is retained only as a fallback/rollback option.
 - Cloud Run is not needed for the current static site.
 - The repository should remain the source of truth for production files.
 
@@ -237,9 +238,15 @@ If Firebase custom-domain migration fails:
 - Confirm `/`, `/save-contact/`, `robots.txt`, `sitemap.xml`, and `downloads/contact.vcf` return `200`.
 - Leave Firebase preview/live site intact for debugging unless it is actively causing a conflict.
 
+Fallback hosting note:
+
+- The old home-hosted setup may remain available as a fallback/rollback environment.
+- It is not the active public production origin while Firebase Hosting is healthy.
+- Do not publish private home-server IPs, credentials, tunnel details, or local network details in this public repository.
+- If fallback activation is needed, record the operational steps in private notes and verify DNS, SSL, redirects, and all production smoke checks before relying on it.
+
 ## Pending Setup
 
 - Firebase project exists: `rest-assured-afh-website`.
-- Confirm whether the old home-hosted setup remains as a fallback or is retired.
 - Confirm Cloudflare SSL/TLS mode remains Full (strict) if proxying is re-enabled.
 - Decide whether to revoke the Firebase CLI GitHub OAuth authorization after setup.

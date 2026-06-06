@@ -36,8 +36,28 @@ https://restassuredafh.com/
 - CSS
 - JavaScript
 - Static assets using optimized image formats where available
+- Firebase Hosting
+- GitHub Actions / Firebase Hosting GitHub integration
+- Cloudflare DNS
 
 The current site does not require a backend for its core public-facing experience.
+
+## Deployment
+
+The production site is deployed as a static website on Firebase Hosting.
+
+Current deployment stack:
+
+- GitHub is the source of truth for production files.
+- Pull requests create Firebase Hosting preview deployments.
+- Merges to `main` deploy to the Firebase Hosting live channel through GitHub Actions.
+- `restassuredafh.com` is connected as the live Firebase Hosting custom domain.
+- `www.restassuredafh.com` redirects to `https://restassuredafh.com/`.
+- Cloudflare remains the DNS provider.
+- Firebase Hosting records are currently DNS-only in Cloudflare so Firebase can manage HTTPS certificates directly.
+- The previous home-hosted setup is kept only as a fallback/rollback option, not as the active public production origin.
+
+See `docs/DEPLOYMENT.md` and `docs/SECURITY.md` for operational notes.
 
 ## Repository Structure
 
@@ -70,6 +90,6 @@ Project documentation is kept in `docs/`:
 
 ## Status
 
-The current priority is repository professionalization, documentation cleanup, SEO planning, and deployment evaluation. A larger design overhaul is intentionally deferred until those foundations are handled.
+Repository professionalization, documentation cleanup, Firebase Hosting migration, GitHub-based deployment, and custom-domain migration are complete.
 
-Recommended next infrastructure direction: evaluate Firebase Hosting with GitHub-based deployment while keeping Cloudflare DNS/CDN considerations documented.
+Current follow-up priorities are post-migration cleanup, SEO planning, local SEO implementation, and later design polish.
