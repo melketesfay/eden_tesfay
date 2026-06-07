@@ -128,6 +128,7 @@ img {
   display: none;
   background: transparent;
   border: 0;
+  cursor: pointer;
   padding: 0.5rem;
 }
 .nav-toggle span {
@@ -136,6 +137,20 @@ img {
   height: 2px;
   margin: 5px 0;
   background: var(--ink);
+  border-radius: 999px;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+  transform-origin: center;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .hero {
@@ -794,6 +809,10 @@ figure.gallery-card {
   .hero-visual-card {
     opacity: 1 !important;
     transform: none !important;
+    transition: none !important;
+  }
+
+  .nav-toggle span {
     transition: none !important;
   }
 }

@@ -83,17 +83,19 @@ Known historical work:
 - Investigated Cloudflare robots/autoconfig/autodiscover issues.
 - Discussed Google Business Profile/local SEO strategy.
 - Discussed migration away from home hosting to Firebase Hosting or Google Cloud.
+- Added branded visitor-facing `404.html` page.
+- Updated save-contact page with approved nurse-led wording.
+- Updated the mobile navigation toggle so it changes from hamburger to close icon while open.
 
 Do not assume every historical file still exists in the repo. Verify.
 
 ## Current known state
 
-The latest known repository state is not directly available in this ChatGPT window except prior uploaded README snippets and project memory.
-
-Known or likely files:
+Known current files and folders:
 
 - `README.md`
 - `index.html`
+- `404.html`
 - `style.css`
 - `script.js`
 - `save-contact/index.html`
@@ -101,11 +103,10 @@ Known or likely files:
 - `robots.txt`
 - `sitemap.xml`
 - `assets/` with real photos, generated images, logos, favicons, and possibly WebP variants
-- possible prior generated zip packages and patches outside the repo
+- `business_card/` with QR/business-card assets
+- `docs/` with project, deployment, security, SEO, maintenance, and AI handoff docs
 
-The README currently appears to be too technical/progress-oriented and should be rewritten for a public/employer/client audience.
-
-A more detailed technical/project-history record should be moved to documentation files under `docs/`.
+The README has been rewritten as a public project overview. Detailed technical/project-history records live in `docs/`.
 
 ## Current user goals
 
@@ -122,31 +123,17 @@ Completed foundation work:
 - `restassuredafh.com` connected to Firebase Hosting.
 - `www.restassuredafh.com` redirects to `https://restassuredafh.com/`.
 - Previous home-hosted setup is retained only as a fallback/rollback option.
+- Branded visitor-facing 404 page added.
+- Save-contact page updated with approved nurse-led wording.
+- Mobile menu toggle polished to show a close icon while open.
 
 Current priorities:
 
-1. Review remaining site follow-ups: non-numeric image heights and `script.js` loading behavior.
-2. Audit local SEO visibility and Google Business Profile.
-3. Later implement local SEO improvements.
-4. Later do V2 design overhaul.
-
-## Recommended repository name
-
-Current repo name appears to be based on the owner name and is not descriptive enough.
-
-Recommended new repo name:
-
-```text
-rest-assured-afh-website
-```
-
-Alternative:
-
-```text
-rest-assured-afh-static-site
-```
-
-Preferred: `rest-assured-afh-website`.
+1. Audit local SEO visibility and Google Business Profile.
+2. Update `docs/SEO_PLAN.md` with verified findings.
+3. Plan and implement legitimate local SEO improvements.
+4. Review remaining cleanup items only if they are still relevant.
+5. Later do V2 design overhaul.
 
 ## Current SEO concern
 
@@ -214,8 +201,7 @@ Current stack:
 
 ### Documentation risks
 
-- Current README is not portfolio-oriented.
-- Important technical decisions are spread across chat history.
+- Future sessions may miss recent state if these docs are not read.
 - Future Codex sessions lack context unless these docs are maintained.
 
 ### Content/legal risks
@@ -223,50 +209,22 @@ Current stack:
 - Do not invent care guarantees, medical claims, staff qualifications, availability, pricing, or testimonials.
 - All claims must be grounded in provided business facts.
 
-## Known commands/tasks already discussed
+## Project Pause Note
 
-Documentation setup:
+The project is intentionally paused after the June 2026 Firebase/deployment/documentation/404/mobile-polish work. When resuming after the pause, start from `main`, inspect the live site and repository state, and open a focused branch for the next task.
 
-```bash
-mkdir -p docs
-touch docs/TECHNICAL_DOCUMENTATION.md
-touch docs/PROJECT_HISTORY.md
-touch docs/DEPLOYMENT.md
-touch docs/SEO_PLAN.md
-touch docs/MAINTENANCE.md
-touch docs/SECURITY.md
-touch docs/TODO.md
-```
-
-Potential AI context setup:
-
-```bash
-mkdir -p docs/ai
-touch AGENTS.md
-touch docs/ai/HANDOFF.md
-touch docs/ai/DECISIONS.md
-touch docs/ai/NEXT_ACTIONS.md
-```
-
-No confirmed command execution in the repository is known from the chat for these exact files yet.
-
-## Suggested next safe working order
+## Suggested next safe working order after pause
 
 1. Inspect repo state:
    - list files
    - read current README
-   - inspect current `index.html`, `style.css`, `script.js`
+   - inspect current `index.html`, `404.html`, `style.css`, `script.js`
    - inspect current `robots.txt`, `sitemap.xml`, structured data
-2. Add AI context docs.
-3. Rename repo on GitHub.
-4. Update local Git remote if GitHub rename changes remote URL.
-5. Rewrite README.
-6. Move old README/progress content into `docs/PROJECT_HISTORY.md` or `docs/TECHNICAL_DOCUMENTATION.md`.
-7. Create `docs/TODO.md` and `docs/SEO_PLAN.md`.
-8. Perform SEO audit.
-9. Evaluate Firebase Hosting.
-10. Implement CI/CD.
-11. Only after this: design V2.
+2. Confirm the latest production deployment is healthy.
+3. Perform SEO audit and Google Business Profile review.
+4. Update `docs/SEO_PLAN.md` with verified findings.
+5. Plan one focused local SEO implementation branch.
+6. Only after SEO groundwork: consider V2 design polish.
 
 ## Handoff instruction for future AI/Codex
 

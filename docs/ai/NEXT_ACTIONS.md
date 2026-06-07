@@ -13,12 +13,21 @@ This file lists concrete next actions for future AI sessions. Keep it short and 
 - DNS provider: Cloudflare.
 - `www.restassuredafh.com` redirects to `https://restassuredafh.com/`.
 - Previous home-hosted setup is fallback/rollback only, not active public production.
+- Branded `404.html` page exists for missing routes.
+- Save-contact page uses approved licensed nurse/nurse-led wording.
+- Mobile menu button changes from hamburger to close icon while open.
+
+## Pause Note
+
+Project work is paused after the June 2026 documentation, Firebase Hosting, custom-domain, 404, save-contact, and mobile-menu polish work. Resume from latest `main` and open a focused branch for the next task.
 
 ## Immediate Actions
 
-1. Check and fix non-numeric image height attributes if confirmed as a cleanup task.
-2. Confirm homepage `script.js` loading behavior against performance notes.
-3. Audit current local SEO visibility and Google Business Profile.
+1. Pull latest `main`, confirm a clean working tree, and smoke-test production.
+2. Audit current local SEO visibility and Google Business Profile.
+3. Update `docs/SEO_PLAN.md` with verified search and GBP observations.
+4. Check and fix non-numeric image height attributes only if still confirmed as a cleanup task.
+5. Confirm homepage `script.js` loading behavior only if still relevant after current deployment behavior.
 
 ## SEO Next Actions
 

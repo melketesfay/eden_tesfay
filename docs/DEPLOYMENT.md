@@ -245,8 +245,10 @@ Fallback hosting note:
 - Do not publish private home-server IPs, credentials, tunnel details, or local network details in this public repository.
 - If fallback activation is needed, record the operational steps in private notes and verify DNS, SSL, redirects, and all production smoke checks before relying on it.
 
-## Pending Setup
+## Future Operational Checks
 
-- Firebase project exists: `rest-assured-afh-website`.
 - Confirm Cloudflare SSL/TLS mode remains Full (strict) if proxying is re-enabled.
-- Decide whether to revoke the Firebase CLI GitHub OAuth authorization after setup.
+- Re-test Firebase custom-domain behavior before enabling Cloudflare proxying on Firebase Hosting records.
+- Use pull request preview deployments for future production-facing changes.
+- Smoke-test production after each merge to `main`.
+- Keep any home-server fallback activation runbook in private operational notes, not this public repository.

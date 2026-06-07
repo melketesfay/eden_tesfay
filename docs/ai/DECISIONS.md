@@ -132,6 +132,23 @@ Known prior work included:
 - lightbox behavior
 - favicon/logo optimization
 
+### Branded 404 page
+
+Decision: Use a branded visitor-facing `404.html` instead of the default Firebase Hosting error page.
+
+Reason: Missing routes should not show developer-oriented Firebase copy to families or other public visitors.
+
+Current implementation:
+
+- `404.html`
+- `assets/404-sleeping-dog.svg`
+
+### Mobile navigation toggle
+
+Decision: The mobile hamburger button should visually change to a close icon while the menu is open and keep its ARIA state in sync.
+
+Reason: This improves mobile usability and accessibility without changing the site layout.
+
 ### Repo name
 
 Decision: Use a professional, descriptive repository name.
@@ -241,9 +258,8 @@ Only create the second page if it can be substantially useful and not duplicate/
 These need verification or final choice:
 
 1. Whether Cloudflare proxying should remain off for Firebase Hosting records or be re-tested later.
-2. Whether to revoke the Firebase CLI GitHub OAuth authorization now that GitHub Actions are configured.
-3. Whether to create a separate SEO landing page before broader on-page SEO changes.
-4. Current Google Business Profile category/service configuration.
-5. Whether a Search Console property already exists and is fully verified.
-6. Whether Analytics is desired.
-7. Whether the home-server fallback runbook should be maintained in private operational notes.
+2. Whether to create a separate SEO landing page before broader on-page SEO changes.
+3. Current Google Business Profile category/service configuration.
+4. Whether a Search Console property already exists and is fully verified.
+5. Whether Analytics is desired.
+6. Whether the home-server fallback runbook should be maintained in private operational notes.

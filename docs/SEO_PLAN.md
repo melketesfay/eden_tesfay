@@ -26,6 +26,7 @@
 
 ## Planned Work
 
+- Resume here after the current project pause.
 - Audit current Google results and Search Console data if available.
 - Audit Google Business Profile category, services, photos, reviews, and NAP consistency.
 - Create one strong local landing page first: `/adult-family-home-everett-wa/`.

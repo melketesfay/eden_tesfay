@@ -5,15 +5,23 @@ const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
 if (navToggle && siteNav) {
+  const setNavState = (isOpen) => {
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation" : "Open navigation",
+    );
+  };
+
   navToggle.addEventListener("click", () => {
     const isOpen = siteNav.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
+    setNavState(isOpen);
   });
 
   siteNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       siteNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
+      setNavState(false);
     });
   });
 }

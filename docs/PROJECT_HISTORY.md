@@ -29,8 +29,10 @@ This file preserves implementation history that is too detailed for the public R
 - Owner portrait assets added under `assets/owner/`.
 - Save-contact page added at `/save-contact/`.
 - vCard download added at `/downloads/contact.vcf`.
+- Branded visitor-facing `404.html` page added.
 - Business card QR assets added under `business_card/`.
 - Favicon, Apple touch icon, and logo assets added.
+- Mobile navigation toggle updated to show a close icon while open.
 
 ## SEO and Contact Workflow History
 
@@ -63,6 +65,15 @@ This file preserves implementation history that is too detailed for the public R
 - Cloudflare remains the DNS provider.
 - The previous home-hosted setup is retained only as a fallback/rollback option.
 - Cloud Run was discussed but is not currently needed for the static website.
+
+## June 2026 Closeout
+
+- Repository professionalization, Firebase Hosting migration, GitHub-based deployment, and custom-domain setup were completed.
+- `restassuredafh.com` now serves from Firebase Hosting; the old home-hosted setup remains fallback only.
+- Save-contact page wording was updated to approved nurse-led positioning without inventing a specific credential abbreviation.
+- A custom branded 404 page was added with a themed sleeping-dog illustration.
+- Mobile menu polish was added so the hamburger changes to a close icon while the menu is open.
+- Project work was paused after these changes, with local SEO audit planned as the next major phase.
 
 ## Migrated Documentation Notes
 
