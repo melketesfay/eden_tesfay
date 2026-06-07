@@ -3,13 +3,14 @@
 ## Current Verified State
 
 - The website is a static HTML/CSS/JavaScript site.
-- Core production files include `index.html`, `style.css`, `script.js`, `robots.txt`, `sitemap.xml`, `save-contact/index.html`, and `downloads/contact.vcf`.
+- Core production files include `index.html`, `404.html`, `style.css`, `script.js`, `robots.txt`, `sitemap.xml`, `save-contact/index.html`, and `downloads/contact.vcf`.
 - Image and brand assets are stored under `assets/`.
 - Business card and QR assets are stored under `business_card/`.
 
 ## Architecture
 
 - The homepage is served from `index.html`.
+- Missing routes are handled by the branded `404.html` page on Firebase Hosting.
 - The save-contact workflow is served from `save-contact/index.html`.
 - The downloadable contact card is stored at `downloads/contact.vcf`.
 - Shared styling is primarily in `style.css`.
@@ -21,6 +22,7 @@
 - Responsive static website for Rest Assured AFH.
 - Real home photo gallery with lightbox behavior.
 - Save-contact page for QR workflows.
+- Branded visitor-facing 404 page.
 - vCard download for Eden Tesfay and Rest Assured AFH.
 - Basic local SEO metadata, structured data, sitemap, and robots file.
 - Business card QR assets for the website and save-contact page.
