@@ -28,6 +28,7 @@ https://restassuredafh.com/
 - `robots.txt` and `sitemap.xml`.
 - Save-contact page at `/save-contact/`.
 - Downloadable vCard at `/downloads/contact.vcf`.
+- Branded visitor-facing `404.html` page.
 - Business card QR assets.
 
 ## Tech Stack
@@ -64,6 +65,7 @@ See `docs/DEPLOYMENT.md` and `docs/SECURITY.md` for operational notes.
 ```text
 .
 |-- index.html
+|-- 404.html
 |-- style.css
 |-- script.js
 |-- save-contact/
@@ -90,6 +92,6 @@ Project documentation is kept in `docs/`:
 
 ## Status
 
-Repository professionalization, documentation cleanup, Firebase Hosting migration, GitHub-based deployment, and custom-domain migration are complete.
+Repository professionalization, documentation cleanup, Firebase Hosting migration, GitHub-based deployment, custom-domain migration, and final mobile/404 polish are complete.
 
 Current follow-up priorities are post-migration cleanup, SEO planning, local SEO implementation, and later design polish.

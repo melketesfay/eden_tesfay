@@ -3,6 +3,7 @@
 ## Routine Checks
 
 - Confirm the homepage loads.
+- Confirm a missing route shows the branded 404 page.
 - Confirm the save-contact page loads.
 - Confirm phone, email, and address links are correct.
 - Confirm `downloads/contact.vcf` downloads correctly.
@@ -47,8 +48,15 @@
 - Back up production if using a direct server deployment.
 - Smoke-test the homepage, save-contact page, vCard, robots file, and sitemap after deployment.
 
+## Resume After Pause
+
+- Pull the latest `main` branch before starting new work.
+- Confirm the working tree is clean.
+- Check the latest GitHub Actions deployment status.
+- Smoke-test `https://restassuredafh.com/`, `/save-contact/`, `/downloads/contact.vcf`, `/robots.txt`, `/sitemap.xml`, and one missing URL.
+- Review `docs/ai/NEXT_ACTIONS.md` before choosing the next branch.
+
 ## Pending Documentation
 
-- Add a detailed deployment checklist after the final hosting workflow is chosen.
 - Add an image optimization recipe after the preferred tooling is confirmed.
 - Add Lighthouse testing notes after the next production test.

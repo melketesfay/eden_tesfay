@@ -25,6 +25,7 @@
 - [x] Confirm Cloudflare SSL/TLS mode remains Full strict if proxying is re-enabled.
 - [x] Decide whether to revoke the Firebase CLI GitHub OAuth authorization after setup.
 - [x] Keep any home-server fallback activation runbook in private operational notes.
+- [x] Add final mobile menu close-icon polish.
 - [ ] Audit current local SEO visibility and Google Business Profile.
 
 ## Site Follow-Ups To Review
@@ -32,6 +33,7 @@
 - [x] Confirm "nurse-led" wording is approved and document Eden as a licensed nurse.
 - [x] Add branded visitor-facing 404 page.
 - [x] Update save-contact page with licensed nurse and nurse-led wording.
+- [x] Change mobile hamburger button to a close icon while the menu is open.
 - [ ] Fix non-numeric image height attributes if confirmed as a cleanup task.
 - [ ] Confirm homepage `script.js` loading behavior against performance notes.
 

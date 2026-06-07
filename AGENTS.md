@@ -75,17 +75,20 @@ Before editing:
 5. Do not remove SEO, accessibility, performance, structured data, contact, QR, or deployment-related work without a clear reason.
 6. Do not commit secrets, API keys, service account files, `.env`, or private client data.
 
-## Expected repository direction
+## Current repository direction
 
-The repository currently needs to be made more professional for portfolio/client handoff use.
+The repository has been professionalized for portfolio/client handoff use.
 
-Known planned changes:
+Completed foundation work:
 
-- Rename the GitHub repository to a professional name, recommended: `rest-assured-afh-website`.
-- Rewrite `README.md` as a public-facing, employer/client-oriented project overview.
-- Move long technical/progress documentation into `docs/`.
-- Add AI handoff/context files under `docs/ai/`.
-- Add or update:
+- GitHub repository renamed to `rest-assured-afh-website`.
+- `README.md` rewritten as a public-facing, employer/client-oriented project overview.
+- Long technical/progress documentation moved into `docs/`.
+- AI handoff/context files added under `docs/ai/`.
+- Firebase Hosting and GitHub-based deployment configured.
+- `restassuredafh.com` and `www.restassuredafh.com` connected through Firebase Hosting.
+- Branded `404.html`, save-contact nurse-led wording, and mobile menu close-icon polish completed.
+- Documentation files now include:
   - `docs/TECHNICAL_DOCUMENTATION.md`
   - `docs/PROJECT_HISTORY.md`
   - `docs/DEPLOYMENT.md`
@@ -101,6 +104,7 @@ The site is a static website. Known files/features from prior work include:
 - `index.html`
 - `style.css`
 - `script.js`
+- `404.html`
 - `/save-contact/index.html`
 - `/downloads/contact.vcf`
 - `robots.txt`
@@ -109,9 +113,11 @@ The site is a static website. Known files/features from prior work include:
 - favicon/logo work
 - lightbox functionality for real-photo gallery
 - contact/save-contact QR workflow
+- custom visitor-facing 404 page
 - structured data / JSON-LD work for the local business and owner
 - performance optimizations for Lighthouse mobile score
-- Cloudflare in front of the site
+- Firebase Hosting with GitHub Actions/Firebase integration
+- Cloudflare DNS
 
 The actual current repository may differ. Always inspect the repo before changing.
 
@@ -160,16 +166,17 @@ Avoid:
 
 ## Deployment direction
 
-Current hosting was discussed as home-hosted behind Cloudflare. The planned improvement is to evaluate and likely migrate the static site to **Firebase Hosting** with GitHub Actions-based deployment.
+Current production hosting is **Firebase Hosting** with GitHub Actions/Firebase Hosting integration.
 
-Expected target workflow:
+Current workflow:
 
 - GitHub repository as source of truth
-- push/merge to `main` triggers deployment
+- pull requests create Firebase Hosting preview deployments
+- merge to `main` triggers deployment
 - Firebase Hosting serves the static site
-- Cloudflare remains DNS/CDN/proxy layer if appropriate
+- Cloudflare remains DNS provider
 - custom domain remains `restassuredafh.com`
-- home server can remain as fallback only if useful
+- home server remains fallback/rollback only, not active production
 
 Cloud Run was discussed but is likely unnecessary for the current static website. Firebase Hosting is the preferred first option for a static site. Cloud Run may become relevant later for backend/API features.
 
@@ -253,8 +260,7 @@ Do not start a full redesign before SEO/deployment/documentation issues are hand
 
 Known priority order:
 
-1. Project documentation and repo professionalism
-2. SEO audit and local SEO plan
-3. Firebase Hosting / CI-CD evaluation and migration
-4. Local SEO implementation
-5. Later V2 design overhaul
+1. SEO audit and local SEO plan
+2. Local SEO implementation
+3. Optional post-migration cleanup items
+4. Later V2 design overhaul

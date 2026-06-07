@@ -84,3 +84,4 @@ Do not add a strict Content Security Policy blindly because the site uses Google
 - Define backup and recovery steps for future production changes.
 - Keep any home-server fallback activation runbook in private operational notes, not in this public repository.
 - Confirm GitHub Actions logs do not expose secrets during routine future deploy reviews.
+- Re-check GitHub Secrets and Firebase service-account access before any future CI/CD changes.

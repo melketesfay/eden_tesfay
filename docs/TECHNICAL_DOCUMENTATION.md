@@ -23,6 +23,7 @@
 - Real home photo gallery with lightbox behavior.
 - Save-contact page for QR workflows.
 - Branded visitor-facing 404 page.
+- Mobile navigation toggle changes from hamburger to close icon while open.
 - vCard download for Eden Tesfay and Rest Assured AFH.
 - Basic local SEO metadata, structured data, sitemap, and robots file.
 - Business card QR assets for the website and save-contact page.
@@ -33,6 +34,7 @@
 - Real home photos use `assets/real-*` naming.
 - Logo and favicon assets are split between top-level `assets/` files and `assets/logo/`.
 - Owner portrait assets are stored under `assets/owner/`.
+- The custom 404 illustration is stored at `assets/404-sleeping-dog.svg`.
 - Older PNG/JPG files are still present for safety; current HTML generally prefers optimized WebP files where available.
 
 ## Known Cleanup Items
