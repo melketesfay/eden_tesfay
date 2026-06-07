@@ -30,6 +30,8 @@
 ## Site Follow-Ups To Review
 
 - [x] Confirm "nurse-led" wording is approved and document Eden as a licensed nurse.
+- [x] Add branded visitor-facing 404 page.
+- [x] Update save-contact page with licensed nurse and nurse-led wording.
 - [ ] Fix non-numeric image height attributes if confirmed as a cleanup task.
 - [ ] Confirm homepage `script.js` loading behavior against performance notes.
 
