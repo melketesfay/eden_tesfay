@@ -10,17 +10,17 @@ The site presents the home, licensed nurse-led care approach, real home photos, 
 
 ## Business Card Workflow
 
-The project also includes matching business card assets with QR-driven contact flows:
+The project also includes matching business card assets with QR-driven contact flows. The front card points to the live website, while the back card points to the save-contact page.
 
 <p align="center">
   <img
     alt="Rest Assured AFH business card front"
-    src="business_card/version_01_front.png"
+    src="business_card/front-card-preview.png"
     width="48%"
   />
   <img
     alt="Rest Assured AFH business card back with QR code"
-    src="business_card/version_01_back.png"
+    src="business_card/back-card-preview.png"
     width="48%"
   />
 </p>
