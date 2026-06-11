@@ -14,6 +14,7 @@
       "README.md",
       "docs/**",
       "business_card/**",
+      "banner_brochure/**",
       "gitignore",
       "firebase-debug.log",
       "firebase-debug.*.log"
